@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-// is this being pushed?!
+
 const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
