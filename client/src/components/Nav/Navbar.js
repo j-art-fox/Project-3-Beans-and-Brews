@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import  Auth  from "../../../src/utils/auth";
+import  Auth  from "../../utils/auth";
 import logo from "../../images/Horz-Wht-1024x139.png";
 
 // if not logged in there is the signin button
