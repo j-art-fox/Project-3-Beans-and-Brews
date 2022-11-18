@@ -4,7 +4,7 @@ import Home from './components/pages/Home';
 import Menu from './components/pages/Menu';
 import OrderOnline from './components/pages/OrderOnline';
 import OurCoffee from './components/pages/OurCoffee';
-import { Navigate, Switch, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
