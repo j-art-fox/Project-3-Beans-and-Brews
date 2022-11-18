@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../images/Horz-Wht-1024x139.png";
 
 export default function Logo() {
