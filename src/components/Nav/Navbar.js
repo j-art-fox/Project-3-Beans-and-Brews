@@ -6,7 +6,7 @@ export default function Navbar() {
     <>
       <nav class="bg-amber-600 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <Link href="https://beansandbrews.com/" class="flex items-center">
+          <Link to="/" class="flex items-center">
             <img
               src={logo}
               class="h-6 mr-3 sm:h-9"
@@ -138,12 +138,12 @@ export default function Navbar() {
 
               {/* Menu Button */}
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/menu"
                   class="block py-2 pl-3 pr-4 text-white hover:font-bold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Menu
-                </a>
+                </Link>
               </li>
               
               {/* Our Coffee Button */}
