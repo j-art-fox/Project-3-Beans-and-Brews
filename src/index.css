@@ -15,3 +15,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-hero-image {
+  background-image: url('./images/hero-image-2.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
