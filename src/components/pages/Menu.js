@@ -3,9 +3,7 @@ import React from 'react'
 const Menu = () => {
   return (
     <div>
-    
-    Menu bro      
-      
+        Menu bro      
     </div>
   )
 }
