@@ -4,7 +4,7 @@ const Register = () => {
   <div>
     <section class="text-gray-600 body-font relative">
       <div class="flex flex-col items-center justify-center container px-5 py-24 mx-auto">
-        <div class="lg:w-1/2 md:w-2/3 text-center  mb-12 rounded-lg bg-amber-100 shadow">
+        <div class="lg:w-1/2 md:w-2/3 text-center mb-12 rounded-lg bg-amber-100 shadow">
           <h1 class="sm:text-3xl pt-3 text-2xl font-medium title-font mb-4 text-stone-700">Account Creation</h1>
           <p class="lg:w-2/3 pb-3 mx-auto leading-relaxed text-base">Join the thousands earning rewards, free drinks, food, and refills.</p>
         </div>
