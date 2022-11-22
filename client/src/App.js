@@ -1,4 +1,13 @@
 import React, { useState} from 'react';
+// import {
+//   ApolloClient,
+//   InMemoryCache,
+//   ApolloProvider,
+//   createHttpLink,
+// } from '@apollo/client';
+// import { setContext } from '@apollo/client/link/context';
+
+
 import Navbar from "./components/Nav/Navbar";
 import Footer from './components/Footer/Footer';
 import Home from './components/pages/Home';
