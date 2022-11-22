@@ -8,7 +8,7 @@ import OurCoffee from './components/pages/OurCoffee';
 import Contact from './components/pages/Contact';
 import Register from './components/pages/Register';
 import Dashboard from './components/pages/Account/Dashboard';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
         <Route path='/order' element={<OrderOnline/>} />
         <Route path='/ourcoffee' element={<OurCoffee/>} />
         <Route path='/contact' element={<Contact/>} />
+        <Route path='/account' element={<Navigate to= "/dashboard"/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
         <Route path='/Register' element={<Register/>} />
       </Routes>

@@ -65,7 +65,7 @@ const Footer = () => {
           <Link to="/" class="text-gray-600">Home</Link>
         </p>
         <p class="mb-4">
-          <Link to="/" class="text-gray-600">Account</Link>
+          <Link to="/dashboard" class="text-gray-600">Account</Link>
         </p>
         <p class="mb-4">
           <Link to="/menu" class="text-gray-600">Menu</Link>
