@@ -7,6 +7,8 @@ import OurCoffee from './components/pages/OurCoffee';
 import Contact from './components/pages/Contact';
 import Register from './components/pages/Register';
 import Dashboard from './components/pages/Account/Dashboard';
+import Rewards from './components/pages/Account/Rewards';
+import Settings from './components/pages/Account/Settings';
 import { Route, Routes, Navigate } from "react-router-dom";
 
 
@@ -23,6 +25,8 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/account' element={<Navigate to= "/dashboard"/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/rewards' element={<Rewards/>} />
+        <Route path='/settings' element={<Settings/>} />
         <Route path='/Register' element={<Register/>} />
       </Routes>
     </div>
