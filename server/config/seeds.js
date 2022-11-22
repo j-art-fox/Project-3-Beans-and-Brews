@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
+    { name: 'Hot Drinks' },
+    { name: 'Cold Drinks' },
     { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Whole Beans' },
+    { name: 'Merchandise' }
   ]);
 
   console.log('categories seeded');
@@ -18,112 +18,72 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      name: 'Cold Brew',
+      description:`We've spent a long time perfecting our cold brew process. Now we're proud to offer a cold brew with our signature High-Altitude Roasted beans brewed over twelve hours, resulting in a smooth, full-bodied taste with hints of cocoa and caramel.`,
+      image: 'https://www.beansandbrews.com/wp-content/uploads/2020/05/Cold-Brew_400-Copy-300x200.jpg.webp',
+      category: categories[1]._id,
+      price: 2.99,
+      quantity: 500
+    },
+    {
+      name: 'Hot Eggnog Latte',
+      description:`Rich, creamy eggnog and skim milk with fresh brewed espresso lightly dusted with cinnamon and nutmeg, delicious decadence!`,
+      image: 'https://www.beansandbrews.com/wp-content/uploads/2018/11/Eggnog-300x300.jpg.webp',
       category: categories[0]._id,
       price: 2.99,
       quantity: 500
     },
     {
-      name: 'Canned Coffee',
+      name: 'Cold Eggnog Latte',
+      description:`Rich, creamy eggnog and skim milk with fresh brewed espresso lightly dusted with cinnamon and nutmeg, delicious decadence!`,
+      image: 'https://www.beansandbrews.com/wp-content/uploads/2018/11/Eggnog-300x300.jpg.webp',
+      category: categories[1]._id,
+      price: 2.99,
+      quantity: 500
+    },
+    {
+      name: 'Cane & Cream Cold Brew',
+      description:`Our signature full-bodied cold brew with a splash of cream and lightly sweetened with cane sugar.`,
+      image: 'https://www.beansandbrews.com/wp-content/uploads/2020/05/Cane-Cream_400-300x200.jpg.webp',
+      category: categories[1]._id,
+      price: 2.99,
+      quantity: 500
+    },
+    {
+      name: 'Cappuccino',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        'Our Beans cappuccino combines creamy steamed milk, piping-hot espresso, and a generous helping of foamy froth. Pair with a fresh biscotti and sink into a cozy armchair.',
+      image: 'https://www.beansandbrews.com/wp-content/uploads/2011/10/BB_Hot-Cappucinno-300x200.jpg.webp',
+      category: categories[0]._id,
+      price: 2.99,
+      quantity: 500
+    },
+    {
+      name: 'Caramel Cielo',
+      description: `Feeling a little decadent? This signature espresso drink's special recipe includes a frothy topping and a drizzle of real caramel sauce. It's the perfect balance of a pick-me-up and a treat.`,
+      image: 'https://www.beansandbrews.com/wp-content/uploads/2011/10/BB_Hot-Caramel-Cielo-300x200.jpg.webp',
       category: categories[0]._id,
       price: 1.99,
       quantity: 500
     },
     {
-      name: 'Toilet Paper',
+      name: 'Café Latte',
+      category: categories[0]._id,
+      description:
+      `It's a classic for good reason: espresso, steamed milk, and topped with the perfect dollop of froth. It's perfect for those new to espresso drinks--and perfect for seasoned folks who love a traditional go-to.`,
+      image: 'toilet-paper.jpg',
+      price: 4.99,
+      quantity: 20
+    },
+    {
+      name: 'Pumpkin Pie Fritalia™',
       category: categories[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
+      `It's a classic for good reason: espresso, steamed milk, and topped with the perfect dollop of froth. It's perfect for those new to espresso drinks--and perfect for seasoned folks who love a traditional go-to.`,
       image: 'toilet-paper.jpg',
       price: 7.99,
       quantity: 20
     },
-    {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
-    },
-    {
-      name: 'Set of Wooden Spoons',
-      category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
-    },
-    {
-      name: 'Camera',
-      category: categories[2]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
-    },
-    {
-      name: 'Tablet',
-      category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
-    },
-    {
-      name: 'Tales at Bedtime',
-      category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
-    },
-    {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
-    },
-    {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
-    }
   ]);
 
   console.log('products seeded');
