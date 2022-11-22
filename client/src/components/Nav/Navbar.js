@@ -97,7 +97,7 @@ function Navbar() {
               Auth.loggedIn() &&
                 <li>
                   <Link
-                    to="/"
+                    to="/dashboard"
                     class="block py-2 pl-3 pr-4 text-white hover:font-bold bg-stone-700 rounded md:bg-transparent md:text-white-700 md:p-0 md:dark:text-white dark:bg-stone-600 md:dark:bg-transparent"
                     aria-current="page"
                   >
