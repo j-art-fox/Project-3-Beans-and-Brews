@@ -17,12 +17,12 @@ const productSchema = new Schema({
     type: String,
     trim: true
   },
-  category: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Category'
-    }
-  ],
+  // category: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: 'Category'
+  //   }
+  //],
   price: {
     type: Number,
     required: true,
