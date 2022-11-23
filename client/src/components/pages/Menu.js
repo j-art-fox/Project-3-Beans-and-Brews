@@ -89,16 +89,16 @@ const products = [
 
 const Menu = () => {
   return (
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap w-full mb-20">
-          <div class="grid lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 class="sm:text-3xl text-2xl text-center font-medium title-font mb-2 text-gray-900">
+    <section className="text-gray-600 body-font">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="flex flex-wrap w-full mb-20">
+          <div className="grid lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 className="sm:text-3xl text-2xl text-center font-medium title-font mb-2 text-gray-900">
               We give a Bean.
             </h1>
-            <div class="h-1 justify-self-center w-96 bg-amber-500 rounded"></div>
+            <div className="h-1 justify-self-center w-96 bg-amber-500 rounded"></div>
           </div>
-          <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+          <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
               From the beginning, we’ve made it our top priority to use the
               finest ingredients out there. We lovingly roast every single bean,
               right at our headquarters in Salt Lake. Here, every recipe is
@@ -107,25 +107,25 @@ const Menu = () => {
               taste the difference.
           </p>
           </div>
-          <div class="flex flex-wrap -m-4">
+          <div className="flex flex-wrap -m-4">
             {products.map((product) => {
               return (
-                <div class="xl:w-1/4 md:w-1/2 p-4">
-                <div class="bg-gray-100 p-6 rounded-lg">
+                <div className="xl:w-1/4 md:w-1/2 p-4">
+                <div className="bg-gray-100 p-6 rounded-lg">
                   <img
                     alt={product.name}
-                    class="h-40 rounded mx-auto object-center mb-6 opacity-70 hover:opacity-100 hover:text-amber-500"
+                    className="h-40 rounded mx-auto object-center mb-6 opacity-70 hover:opacity-100 hover:text-amber-500"
                     src={product.image}
                   />
-                  <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-80 hover:opacity-100">
-                    <h2 class="tracking-widest text-lg title-font font-medium text-amber-700 mb-1">
+                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-80 hover:opacity-100">
+                    <h2 className="tracking-widest text-lg title-font font-medium text-amber-700 mb-1">
                       {product.name}
                     </h2>
-                    <h1 class="title-font text-md font-medium text-gray-900 mb-3">
+                    <h1 className="title-font text-md font-medium text-gray-900 mb-3">
                       {product.price}
                     </h1>
-                    <p class="leading-relaxed">{product.description}</p>
-                    <a class="mt-5 inline-flex items-center hover:font-bold" href="#">
+                    <p className="leading-relaxed">{product.description}</p>
+                    <a className="mt-5 inline-flex items-center hover:font-bold" href="#">
                       Order Online
                       <svg
                         fill="none"
@@ -133,7 +133,7 @@ const Menu = () => {
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        class="w-4 h-4 ml-2"
+                        className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
