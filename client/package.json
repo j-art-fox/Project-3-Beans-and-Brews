@@ -1,9 +1,10 @@
 {
-  "name": "project-3-beans-and-brews",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
+    "@apollo/client": "^3.5.8",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "@testing-library/jest-dom": "^5.16.5",
