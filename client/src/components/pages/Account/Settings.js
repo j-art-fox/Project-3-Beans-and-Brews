@@ -3,69 +3,83 @@ import Sidebar from './Sidebar'
 
 const Settings = () => {
   return (
-    <>
+    <div className="flex">
     <Sidebar/>
      
-      
-     <section class="text-gray-600 body-font">
-       <div class="container px-5 py-24 mx-auto">
-         <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-           <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-               <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-             </svg>
-           </div>
-           <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-             <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-             <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-             <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                 <path d="M5 12h14M12 5l7 7-7 7"></path>
-               </svg>
-             </a>
-           </div>
-         </div>
-         <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-           <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-             <h2 class="text-gray-900 text-lg title-font font-medium mb-2">The Catalyzer</h2>
-             <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-             <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                 <path d="M5 12h14M12 5l7 7-7 7"></path>
-               </svg>
-             </a>
-           </div>
-           <div class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-               <circle cx="6" cy="6" r="3"></circle>
-               <circle cx="6" cy="18" r="3"></circle>
-               <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-             </svg>
-           </div>
-         </div>
-         <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-           <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-               <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-               <circle cx="12" cy="7" r="4"></circle>
-             </svg>
-           </div>
-           <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-             <h2 class="text-gray-900 text-lg title-font font-medium mb-2">The 400 Blows</h2>
-             <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-             <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                 <path d="M5 12h14M12 5l7 7-7 7"></path>
-               </svg>
-             </a>
-           </div>
-         </div>
-         <button class="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-       </div>
-     </section>
-      
+    <div className="container inset-10 mx-auto mt-24 mb-auto">
+        <div className="container">
+            <div className="inputs w-full max-w-2xl p-6 mx-auto">
+                <h2 className="text-2xl text-gray-900">Account Setting</h2>
+                <form className="mt-6 border-t border-gray-400 pt-4">
+                    <div className='flex flex-wrap -mx-3 mb-6'>
+                        <div className='w-full md:w-full px-3 mb-6'>
+                            <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' htmlFor='grid-text-1'>email address</label>
+                            <input className='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' id='grid-text-1' type='text' placeholder='Enter email'  required></input>
+                        </div>
+                        <div className='w-full md:w-full px-3 mb-6 '>
+                            <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>password</label>
+                            <button className="appearance-none bg-gray-200 text-gray-900 px-2 py-1 shadow-sm border border-gray-400 rounded-md ">change your password</button>
+                        </div>
+                        <div className='w-full md:w-full px-3 mb-6'>
+                            <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>pick your country</label>
+                            <div className="flex-shrink w-full inline-block relative">
+                                <select className="block appearance-none text-gray-600 w-full bg-white border border-gray-400 shadow-inner px-4 py-2 pr-8 rounded">
+                                    <option>choose ...</option>
+                                    <option>USA</option>
+                                    <option>France</option>
+                                    <option>Spain</option>
+                                    <option>UK</option>
+                                </select>
+                                <div className="pointer-events-none absolute top-0 mt-3  right-0 flex items-center px-2 text-gray-600">
+                                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-full md:w-full px-3 mb-6'>
+                            <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>fav language</label>
+                            <div className="flex-shrink w-full inline-block relative">
+                                <select className="block appearance-none text-gray-600 w-full bg-white border border-gray-400 shadow-inner px-4 py-2 pr-8 rounded">
+                                    <option>choose ...</option>
+                                    <option>English</option>
+                                    <option>France</option>
+                                    <option>Spanish</option>
+                                </select>
+                                <div className="pointer-events-none absolute top-0 mt-3  right-0 flex items-center px-2 text-gray-600">
+                                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="personal w-full border-t border-gray-400 pt-4">
+                            <h2 className="text-2xl text-gray-900">Personal info:</h2>
+                            <div className="flex items-center justify-between mt-4">
+                                <div className='w-full md:w-1/2 px-3 mb-6'>
+                                    <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >first name</label>
+                                    <input className='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required></input>
+                                </div>
+                                <div className='w-full md:w-1/2 px-3 mb-6'>
+                                    <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >last name</label>
+                                    <input className='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required></input>
+                                </div>
+                            </div>
+                            <div className='w-full md:w-full px-3 mb-6'>
+                                <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>user name</label>
+                                <input className='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required></input>
+                            </div>
+                            <div className='w-full md:w-full px-3 mb-6'>
+                                <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >Bio</label>
+                                <textarea className='bg-gray-100 rounded-md border leading-normal resize-none w-full h-20 py-2 px-3 shadow-inner border border-gray-400 font-medium placeholder-gray-700 focus:outline-none focus:bg-white'  required></textarea>
+                            </div>
+                            <div className="flex justify-end">
+                                <button className="appearance-none bg-gray-200 text-gray-900 px-2 py-1 shadow-sm border border-gray-400 rounded-md mr-3" type="submit">save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
      
-    </>
+    </div>
   )
 }
 
