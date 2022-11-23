@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="h-10 text-center lg:text-left bg-gray-100 text-gray-600">
   {/* footer header */}
   {/* social media */}
-  <div className="flex justify-center items-center lg:justify-start p-6 border-b border-gray-300">
+  <div className="flex justify-center items-center lg:justify-start p-6 border-b bg-gray-100 border-gray-300">
     <div className="mr-12 hidden lg:block">
       <span>Follow us on social media</span>
     </div>

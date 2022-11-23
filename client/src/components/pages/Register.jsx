@@ -1,10 +1,38 @@
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth'
+import { ADD_USER } from '../utils/mutations';
 
-const Register = () => {
+function Register(props) {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [addUser] = useMutation(ADD_USER);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const mutationResponse = await addUser({
+      variables: {
+        email: formState.email,
+        password: formState.password,
+        firstName: formState.firstName,
+        lastName: formState.lastName,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
   return (
     <div>
       <section className="text-gray-600 body-font relative">
-        <div className="flex flex-col items-center justify-center container px-5 py-24 mx-auto">
+        <form className="flex flex-col items-center justify-center container px-5 py-24 mx-auto" onSubmit={handleFormSubmit}>
           <div className="lg:w-1/2 md:w-2/3 text-center mb-12 rounded-lg bg-amber-100 shadow">
             <h1 className="sm:text-3xl pt-3 text-2xl font-medium title-font mb-4 text-stone-700">
               Account Creation
@@ -82,7 +110,7 @@ const Register = () => {
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </section>
     </div>
   );
