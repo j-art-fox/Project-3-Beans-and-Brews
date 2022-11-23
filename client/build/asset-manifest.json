@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.c178af28.css",
-    "main.js": "/static/js/main.9ffff7a7.js",
+
+    "main.css": "/static/css/main.f8fe14a3.css",
+    "main.js": "/static/js/main.7990301c.js",
+
     "static/js/787.e43fc43d.chunk.js": "/static/js/787.e43fc43d.chunk.js",
     "static/media/hero-image-2.jpeg": "/static/media/hero-image-2.4cf3b21897d22256683a.jpeg",
     "static/media/Horz-Wht-1024x139.png": "/static/media/Horz-Wht-1024x139.cc952ff1dfcd173606c5.png",
     "index.html": "/index.html",
-    "main.c178af28.css.map": "/static/css/main.c178af28.css.map",
-    "main.9ffff7a7.js.map": "/static/js/main.9ffff7a7.js.map",
+
+    "main.f8fe14a3.css.map": "/static/css/main.f8fe14a3.css.map",
+    "main.7990301c.js.map": "/static/js/main.7990301c.js.map",
     "787.e43fc43d.chunk.js.map": "/static/js/787.e43fc43d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c178af28.css",
-    "static/js/main.9ffff7a7.js"
+    "static/css/main.f8fe14a3.css",
+    "static/js/main.7990301c.js"
   ]
 }
