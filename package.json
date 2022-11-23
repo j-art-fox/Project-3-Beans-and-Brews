@@ -23,5 +23,9 @@
   "homepage": "https://github.com/j-art-fox/Project-3-Beans-and-Brews#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.15.0"
   }
 }
+
