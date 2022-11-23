@@ -1,7 +1,8 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User } = require('../models');
 
 db.once('open', async () => {
+
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
@@ -88,6 +89,7 @@ db.once('open', async () => {
 
   console.log('products seeded');
 
+
   await User.deleteMany();
 
   await User.create({
@@ -95,11 +97,6 @@ db.once('open', async () => {
     lastName: 'Washington',
     email: 'pamela@testmail.com',
     password: 'password12345',
-    orders: [
-      {
-        products: [products[0]._id, products[0]._id, products[1]._id]
-      }
-    ]
   });
 
   await User.create({

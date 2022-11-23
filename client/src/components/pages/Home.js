@@ -1,4 +1,5 @@
 import React from 'react';
+import Auth from '../../utils/auth'
 
 const loggedIn = true;
 
@@ -36,6 +37,7 @@ const Home = () => {
                 <button
                   className="bg-amber-600 w-1/4 py-3 rounded-lg text-center text-white mb-4 hover:bg-gray-900 ease-in-out duration-200 transition-all"
                   type="submit"
+                  onClick={() => Auth.login()}
                 >
                   Login
                 </button>
