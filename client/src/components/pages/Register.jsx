@@ -1,33 +1,35 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import Auth from '../../utils/auth'
-import { ADD_USER } from '../utils/mutations';
+import { ADD_USER} from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
-function Register(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
-  const [addUser] = useMutation(ADD_USER);
+function Register(props){
+  const [formState, setFormState] = useState({email: '', password: ''})
+  const [addUser] = useMutation(ADD_USER)
+  
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
     const mutationResponse = await addUser({
-      variables: {
-        email: formState.email,
-        password: formState.password,
-        firstName: formState.firstName,
-        lastName: formState.lastName,
-      },
-    });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
-  };
+     variables: { email: formState.email,
+     firstName: formState.firstName,
+     lastName: formState.lastName,
+     password: formState.password,
+     },
+  });
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
+  const token = mutationResponse.data.addUser.token;
+  Auth.login(token)
+};
+
+const handleChange = (event) => {
+  const { name, value } = event.target;
+  setFormState({
+    ...formState,
+    [name]: value,
+  });
+};
+
 
   return (
     <div>
@@ -46,26 +48,42 @@ function Register(props) {
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-full ">
                 <div className="relative">
-                  <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-                    Name
+                  <label htmlFor="firstName" className="leading-7 text-sm text-gray-600">
+                    First Name
                   </label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
+                    onChange={handleChange}
+                    type="firstName"
+                    id="firstName"
+                    name="firstName"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
               <div className="p-2 w-full ">
                 <div className="relative">
-                  <label htmlFor="name" className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="lastName" className="leading-7 text-sm text-gray-600">
+                    Last Name
+                  </label>
+                  <input
+                    onChange={handleChange}
+                    type="lastName"
+                    id="lastName"
+                    name="lastName"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-full ">
+                <div className="relative">
+                  <label htmlFor="email" className="leading-7 text-sm text-gray-600">
                     Email
                   </label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
+                    onChange={handleChange}
+                    type="email"
+                    id="email"
+                    name="email"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -76,6 +94,7 @@ function Register(props) {
                     Password
                   </label>
                   <input
+                    onChange={handleChange}
                     type="password"
                     id="password"
                     name="password"
@@ -83,27 +102,11 @@ function Register(props) {
                   />
                 </div>
               </div>
-              <div className="p-2 w-1/2">
-                <div className="relative">
-                  <label
-                    htmlFor="confirm-password"
-                    className="leading-7 text-sm text-gray-600"
-                  >
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    id="confirm-password"
-                    name="confirm-password"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-              </div>
 
               <div className="p-2 w-full">
                 <button 
+                  type="submit"
                   className="flex mx-auto text-white bg-amber-500 border-0 py-2 px-8 focus:outline-none hover:bg-amber-600 rounded text-lg"
-                  onClick={() => Auth.addUser()}
                   >
                   Submit
                 </button>
@@ -116,4 +119,4 @@ function Register(props) {
   );
 };
 
-export default Register;
+export default Register
