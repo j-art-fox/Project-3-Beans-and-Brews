@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import { FaPiggyBank } from 'react-icons/fa';
 const users = [{
-  userName: 'Pamela',
+  firstName: 'Pamela',
   lastName: 'Washington',
   email: 'pamela@testmail.com',
   password: 'password12345'}];
@@ -53,7 +53,7 @@ const Sidebar = () => {
             <div>
               <h2
                 className="font-medium text-xs md:text-sm text-center text-teal-500"
-              > {person.userName}
+              > {person.firstName}
               </h2>
               <p className="text-xs text-gray-500 text-center">ANOTHER LINE OF INFORMATION</p>
             </div>

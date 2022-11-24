@@ -95,14 +95,14 @@ db.once('open', async () => {
   await User.deleteMany();
 
   await User.create({
-    userName: 'Pamela',
-    lastName: 'Washington',
+    firstName: 'Pamela',
+    lastName: 'Washington' 
     email: 'pamela@testmail.com',
     password: 'password12345',
   });
 
   await User.create({
-    userName: 'Elijah',
+    firstName: 'Elijah',
     lastName: 'Holt',
     email: 'eholt@testmail.com',
     password: 'password12345'
