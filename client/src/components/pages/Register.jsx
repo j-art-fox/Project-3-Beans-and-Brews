@@ -88,7 +88,7 @@ const handleChange = (event) => {
                   />
                 </div>
               </div>
-              <div className="p-2 w-1/2">
+              <div className="p-2 w-full">
                 <div className="relative">
                   <label htmlFor="password" className="leading-7 text-sm text-gray-600">
                     Password
