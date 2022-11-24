@@ -11,15 +11,15 @@ import { setContext } from '@apollo/client/link/context';
 
 import Navbar from "./components/Nav/Navbar";
 import Footer from './components/Footer/Footer';
-import Home from './components/pages/Home';
-import Menu from './components/pages/Menu';
-import OrderOnline from './components/pages/OrderOnline';
-import OurCoffee from './components/pages/OurCoffee';
-import Contact from './components/pages/Contact';
-import Register from './components/pages/Register';
-import Dashboard from './components/pages/Account/Dashboard';
-import Rewards from './components/pages/Account/Rewards';
-import Settings from './components/pages/Account/Settings';
+import Home from './pages/Home';
+import Menu from './pages/Menu';
+import OrderOnline from './pages/OrderOnline';
+import OurCoffee from './pages/OurCoffee';
+import Contact from './pages/Contact';
+import Register from './pages/Register';
+import Dashboard from './pages/Account/Dashboard';
+import Rewards from './pages/Account/Rewards';
+import Settings from './pages/Account/Settings';
 import { Route, Routes, Navigate } from "react-router-dom";
 
 // Construct our main GraphQL API endpoint
