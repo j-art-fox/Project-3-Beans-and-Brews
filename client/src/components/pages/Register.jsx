@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client'
-import { ADD_USER} from '../../utils/mutations'
-import Auth from '../../utils/auth'
+import { useMutation } from '@apollo/client';
+import { ADD_USER} from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
 function Register(props){
   const [formState, setFormState] = useState({email: '', password: ''})
@@ -88,7 +88,7 @@ const handleChange = (event) => {
                   />
                 </div>
               </div>
-              <div className="p-2 w-1/2">
+              <div className="p-2 w-full">
                 <div className="relative">
                   <label htmlFor="password" className="leading-7 text-sm text-gray-600">
                     Password
@@ -119,4 +119,4 @@ const handleChange = (event) => {
   );
 };
 
-export default Register;
+export default Register

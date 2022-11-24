@@ -5,13 +5,13 @@ const Footer = () => {
     <footer className="h-10 text-center lg:text-left bg-gray-100 text-gray-600">
   {/* footer header */}
   {/* social media */}
-  <div className="flex justify-center items-center lg:justify-start p-6 border-b border-gray-300">
+  <div className="flex justify-center items-center lg:justify-start p-6 border-b bg-gray-100 border-gray-300">
     <div className="mr-12 hidden lg:block">
       <span>Follow us on social media</span>
     </div>
     <div className="flex justify-center">
       <a href="https://www.facebook.com/beansandbrews/" className="mr-6 text-gray-600">
-        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook"
           className="w-2.5" role="img" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 320 512">
           <path fill="currentColor"
