@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_USER} from '../../utils/mutations';
-import Auth from '../../utils/auth';
+import { ADD_USER} from '../utils/mutations';
+import Auth from '../utils/auth';
 
-function Register(props){
+function Signup(props){
   const [formState, setFormState] = useState({email: '', password: ''})
   const [addUser] = useMutation(ADD_USER)
   
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
     const mutationResponse = await addUser({
-     variables: { email: formState.email,
-     firstName: formState.firstName,
-     lastName: formState.lastName,
-     password: formState.password,
+     variables: 
+     { 
+      email: formState.email,
+      firstName: formState.firstName,
+      lastName: formState.lastName,
+      password: formState.password,
      },
   });
-
   const token = mutationResponse.data.addUser.token;
   Auth.login(token)
 };
@@ -119,4 +119,4 @@ const handleChange = (event) => {
   );
 };
 
-export default Register
+export default Signup

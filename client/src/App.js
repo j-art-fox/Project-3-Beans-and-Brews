@@ -1,41 +1,48 @@
-import React, { useState} from 'react';
-  ///*** think this would be fine to erase {useState} ******/
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 import Navbar from "./components/Nav/Navbar";
-import Footer from './components/Footer/Footer';
-import Home from './components/pages/Home';
-import Menu from './components/pages/Menu';
-import OrderOnline from './components/pages/OrderOnline';
-import OurCoffee from './components/pages/OurCoffee';
-import Contact from './components/pages/Contact';
-import Register from './components/pages/Register';
-import Dashboard from './components/pages/Account/Dashboard';
-import Rewards from './components/pages/Account/Rewards';
-import Settings from './components/pages/Account/Settings';
-import { Route, Routes, Navigate } from "react-router-dom";
+import NoMatch from "./pages/NoMatch";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import OrderOnline from "./pages/OrderOnline";
+import OurCoffee from "./pages/OurCoffee";
+import Login from "./pages/Login";
+import Contact from "./pages/Contact";
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Account/Dashboard";
+import Rewards from "./pages/Account/Rewards";
+import Settings from "./pages/Account/Settings";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -45,31 +52,33 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
 function App() {
-  //here we declare the state boolean variable "loggedIn" and a function to update it.
-  const [loggedIn, setLoggedIn] = useState(false);
+ 
   return (
     <ApolloProvider client={client}>
-    <>
-    <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-    <div>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/menu' element={<Menu/>} />
-        <Route path='/order' element={<OrderOnline/>} />
-        <Route path='/ourcoffee' element={<OurCoffee/>} />
-        <Route path='/contact' element={<Contact/>} />
-        <Route path='/account' element={<Navigate to= "/dashboard"/>} />
-        <Route path='/dashboard' element={<Dashboard/>} />
-        <Route path='/rewards' element={<Rewards/>} />
-        <Route path='/settings' element={<Settings/>} />
-        <Route path='/Register' element={<Register/>} />
-      </Routes>
-    </div>
-    <Footer />
-  </>
-  </ApolloProvider>
+      <Router>
+        <div>
+          <Provider store={store}>
+        <Navbar  />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/order" element={<OrderOnline />} />
+            <Route path="/ourcoffee" element={<OurCoffee />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/account" element={<Navigate to="/dashboard" />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/rewards" element={<Rewards />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
+          <Footer />
+          </Provider>
+        </div>
+      </Router>
+    </ApolloProvider>
   );
 }
 
