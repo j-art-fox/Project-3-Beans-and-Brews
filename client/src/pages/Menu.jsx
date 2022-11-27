@@ -1,73 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from "react";
+import MenuItem from "../components/MenuItem/index";
+import { useDispatch, useSelector } from "react-redux";
+import { UPDATE_PRODUCTS } from "../utils/actions";
+import { useQuery } from "@apollo/client";
+import { QUERY_PRODUCTS } from "../utils/queries";
+import { idbPromise } from "../utils/helpers";
+import spinner from "../images/spinnerB.gif";
 
-const products = [
-  {
-    name: 'Cold Brew',
-    description: `We've spent a long time perfecting our cold brew process. Now we're proud to offer a cold brew with our signature High-Altitude Roasted beans brewed over twelve hours, resulting in a smooth, full-bodied taste with hints of cocoa and caramel.`,
-    image:
-      'https://www.beansandbrews.com/wp-content/uploads/2020/05/Cold-Brew_400-Copy-300x200.jpg.webp',
-    price: 2.99,
-    quantity: 500
-  },
-  {
-    name: 'Hot Eggnog Latte',
-    description: `Rich, creamy eggnog and skim milk with fresh brewed espresso lightly dusted with cinnamon and nutmeg, delicious decadence!`,
-    image:
-      'https://www.beansandbrews.com/wp-content/uploads/2018/11/Eggnog-300x300.jpg.webp',
-    price: 2.99,
-    quantity: 500
-  },
-  {
-    name: 'Cold Eggnog Latte',
-    description: `Rich, creamy eggnog and skim milk with fresh brewed espresso lightly dusted with cinnamon and nutmeg, delicious decadence!`,
-    image:
-      'https://www.beansandbrews.com/wp-content/uploads/2018/11/Eggnog-300x300.jpg.webp',
-    price: 2.99,
-    quantity: 500
-  },
-  {
-    name: 'Cane & Cream Cold Brew',
-    description: `Our signature full-bodied cold brew with a splash of cream and lightly sweetened with cane sugar.`,
-    image:
-      'https://www.beansandbrews.com/wp-content/uploads/2020/05/Cane-Cream_400-300x200.jpg.webp',
-    price: 2.99,
-    quantity: 500
-  },
-  {
-    name: 'Cappuccino',
-    description:
-      'Our Beans cappuccino combines creamy steamed milk, piping-hot espresso, and a generous helping of foamy froth. Pair with a fresh biscotti and sink into a cozy armchair.',
-    image:
-      'https://www.beansandbrews.com/wp-content/uploads/2011/10/BB_Hot-Cappucinno-300x200.jpg.webp',
-    price: 2.99,
-    quantity: 500
-  },
-  {
-    name: 'Caramel Cielo',
-    description: `Feeling a little decadent? This signature espresso drink's special recipe includes a frothy topping and a drizzle of real caramel sauce. It's the perfect balance of a pick-me-up and a treat.`,
-    image:
-      'https://www.beansandbrews.com/wp-content/uploads/2011/10/BB_Hot-Caramel-Cielo-300x200.jpg.webp',
-    price: 1.99,
-    quantity: 500
-  },
-  {
-    name: 'Café Latte',
-    description: `It's a classic for good reason: espresso, steamed milk, and topped with the perfect dollop of froth. It's perfect for those new to espresso drinks--and perfect for seasoned folks who love a traditional go-to.`,
-    image: 'toilet-paper.jpg',
-    price: 4.99,
-    quantity: 20
-  },
-  {
-    name: 'Pumpkin Pie Fritalia™',
-    description: `It's a classic for good reason: espresso, steamed milk, and topped with the perfect dollop of froth. It's perfect for those new to espresso drinks--and perfect for seasoned folks who love a traditional go-to.`,
-    image: 'toilet-paper.jpg',
-    price: 7.99,
-    quantity: 20
+function Menu() {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+
+  const { currentCategory } = state;
+
+  const { loading, data } = useQuery(QUERY_PRODUCTS);
+
+  useEffect(() => {
+    if (data) {
+      dispatch({
+        type: UPDATE_PRODUCTS,
+        products: data.products,
+      });
+      data.products.forEach((product) => {
+        idbPromise("products", "put", product);
+      });
+    } else if (!loading) {
+      idbPromise("products", "get").then((products) => {
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: products,
+        });
+      });
+    }
+  }, [data, loading, dispatch]);
+
+  function filterProducts() {
+    if (!currentCategory) {
+      return state.products;
+    }
+
+    return state.products.filter(
+      (product) => product.category._id === currentCategory
+    );
   }
-];
-
-const Menu = () => {
-  // const [products, setProducts] = useState([]);
 
   return (
     <section className="text-gray-600 body-font">
@@ -89,51 +64,27 @@ const Menu = () => {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {products
-            ? products.map((product) => {
-                return (
-                  <div className="xl:w-1/4 md:w-1/2 p-4" key={product.name}>
-                    <div className="bg-gray-100 p-6 rounded-lg">
-                      <img
-                        alt={product.name}
-                        className="h-40 rounded mx-auto object-center mb-6 opacity-70 hover:opacity-100 hover:text-amber-500"
-                        src={product.image}
-                      />
-                      <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-80 hover:opacity-100">
-                        <h2 className="tracking-widest text-lg title-font font-medium text-amber-700 mb-1">
-                          {product.name}
-                        </h2>
-                        <h1 className="title-font text-md font-medium text-gray-900 mb-3">
-                          {product.price}
-                        </h1>
-                        <p className="leading-relaxed">{product.description}</p>
-                        <a
-                          className="mt-5 inline-flex items-center hover:font-bold"
-                          href="#"
-                        >
-                          Order Online
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            className="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })
-            : null}
+          {state.products.length ? (
+            <div className="xl:w-1/4 md:w-1/2 p-4">
+              {filterProducts().map((product) => (
+                <MenuItem
+                  key={product._id}
+                  _id={product._id}
+                  image={product.image}
+                  name={product.name}
+                  price={product.price}
+                  quantity={product.quantity}
+                />
+              ))}
+            </div>
+          ) : (
+            <h3>Don't forget to seed the db</h3>
+          )}
+          {loading ? <img src={spinner} alt="loading" /> : null}
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Menu;
