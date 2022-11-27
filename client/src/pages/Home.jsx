@@ -5,8 +5,8 @@ const Home = () => {
     <div className="container h-screen flex flex-col">
       {/* Hero */}
       <section className="custom-hero-image flex flex-col justify-start items-center text-center h-1/2 w-screen text-white font-bold bg-slate-300 p-5">
-        <h1 className="text-5xl mt-20 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">The Holiday Favorites are back!</h1>
-        <p className="text-xl w-3/4 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+        <h1 className="text-5xl mt-20 [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)]">The Holiday Favorites are back!</h1>
+        <p className="text-xl w-3/4 [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)]">
           Peppermint Mocha, Eggnog Latte, and the Pumpkin Pie Fritalia® are here
           for the holidays! Try one today! Order Now!
         </p>
