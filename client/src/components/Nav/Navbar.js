@@ -6,7 +6,6 @@ import logo from "../../images/Horz-Wht-1024x139.png";
 // if logged in there is the account button
 
 function Navbar() {
-  console.log("welcome -> loggedIn");
 
   function showNav() {
     if (Auth.loggedIn()) {

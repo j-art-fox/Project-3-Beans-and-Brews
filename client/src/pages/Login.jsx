@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
-import { LOGIN } from "../utils/mutations";
-import Auth from "../utils/auth";
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
       const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
+        variables: { email: formState.email, password: formState.password }
       });
-      console.log(mutationResponse);
-   
+
       const token = mutationResponse.data.login.token;
+
       Auth.login(token);
     } catch (e) {
       console.log(e);
@@ -23,10 +23,10 @@ function Login(props) {
   };
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { type, value } = event.target;
     setFormState({
       ...formState,
-      [name]: value,
+      [type]: value
     });
   };
 
@@ -54,13 +54,13 @@ function Login(props) {
               placeholder="Password"
               onChange={handleChange}
             />
-            {error ? (
+            {/* {error ? (
               <div>
                 <p className="error-text">
                   The provided credentials are incorrect
                 </p>
               </div>
-            ) : null}
+            ) : null} */}
             <div className="flex flex-col justify-center items-center ">
               <button
                 className="bg-amber-600 w-1/4 py-3 rounded-lg text-center text-white mb-4 hover:bg-gray-900 ease-in-out duration-200 transition-all"
@@ -69,7 +69,7 @@ function Login(props) {
                 Login
               </button>
               <p>
-                Don't have an account?{" "}
+                Don't have an account?{' '}
                 <a className="text-amber-600 font-bold" href="/signup">
                   Sign up
                 </a>
