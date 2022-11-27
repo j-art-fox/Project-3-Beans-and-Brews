@@ -33,7 +33,7 @@ This application is a revisitation of the Beans and Brews Coffee House applicati
 ## Credits
 - ![Jordan Ring-Sakabe](https://github.com/j-art-fox)
 - ![Phillip Rose](https://github.com/PhillipRose)
-- ![Kyle Larsen] (https://github.com/kylelarsenlarsen)
+- ![Kyle Larsen](https://github.com/kylelarsenlarsen)
 - ![Garrett Lockhart](https://github.com/GarrettLockhart)
 - ![Clayton Snell](https://github.com/ClaytonSnell)
 
