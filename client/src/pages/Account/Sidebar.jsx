@@ -27,7 +27,7 @@ function Sidebar() {
       >
         <button
           // @click="sidenav = true"
-          className="p-2 border-2 bg-gray-300 rounded-sm border-gray-400 shadow-lg text-gray-500 focus:bg-gray-500 focus:outline-none focus:text-white absolute top-15 left-0 md:hidden"
+          className="p-2 border-2 bg-gray-200 rounded-sm border-gray-300 shadow-lg text-gray-400 focus:bg-gray-400 focus:outline-none focus:text-white absolute top-15 left-0 md:hidden"
         >
           <svg width="15px" height="15px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
