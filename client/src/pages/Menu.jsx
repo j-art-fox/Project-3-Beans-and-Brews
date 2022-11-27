@@ -66,15 +66,15 @@ function Menu() {
         </div>
         <div className="flex flex-wrap -m-4">
           {state.products.length ? (
-            <div className="xl:w-1/4 md:w-1/2 p-4">
+            <div className="container grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-5 w-screen">
               {filterProducts().map((product) => (
                 <MenuItem
                   key={product._id}
                   _id={product._id}
                   image={product.image}
                   name={product.name}
+                  description={product.description}
                   price={product.price}
-                  quantity={product.quantity}
                 />
               ))}
             </div>

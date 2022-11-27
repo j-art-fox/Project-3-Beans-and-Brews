@@ -22,3 +22,16 @@ code {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.custom-para {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (max-width:1024px) {
+  .custom-navbar {
+    display: none;
+  }
+}

@@ -39,14 +39,14 @@ function ProductItem(item) {
     <>
         <div className="bg-gray-100 p-6 rounded-lg">
       <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} className=" border-4 border-gray-300 h-40 rounded mx-auto object-center mb-6 opacity-70 hover:opacity-100 hover:text-amber-500" />
+        <img alt={name} src={`/images/${image}`} className=" border-4 border-gray-300 h-40 rounded mx-auto object-center mb-6 opacity-100 hover:opacity-80 hover:text-amber-500" />
        
       </Link>
-      <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-80 hover:opacity-100">
+      <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-100 hover:opacity-100">
         <h2  className="tracking-widest text-lg title-font font-medium text-amber-700 mb-1">{name}</h2>
+        <p className='custom-para'> {description}</p>
         <h1>${price}</h1>
-        <p>{description}</p>
-        <button onClick={addToCart}>Add to cart</button>
+        <button className='cursor-pointer opacity-70 hover:opacity-100' onClick={addToCart}>Add to cart</button>
       </div>
       </div>
     </>
