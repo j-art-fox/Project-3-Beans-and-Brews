@@ -10,12 +10,12 @@ function Navbar() {
   function showNav() {
     if (Auth.loggedIn()) {
       return (
-        <div>
+        <div className="custom-navbar">
           <ul className="flex-row">
             <div className="flex md:order-2">
               <button
                 type="button"
-                className="text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-stone-600 dark:hover:bg-stone-700 dark:focus:ring-stone-800"
+                className=" text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-stone-600 dark:hover:bg-stone-700 dark:focus:ring-stone-800"
                 onClick={() => Auth.logout()}
               >
                 Sign out
@@ -26,13 +26,13 @@ function Navbar() {
       );
     } else {
       return (
-        <div>
+        <div className="custom-navbar">
           <ul className="flex-row">
             <div className="flex md:order-2">
-              <Link to="/">
+              <Link to="/login">
                 <button
                   type="button"
-                  className="text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-stone-600 dark:hover:bg-stone-700 dark:focus:ring-stone-800"
+                  className=" text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-stone-600 dark:hover:bg-stone-700 dark:focus:ring-stone-800"
                 >
                   Sign in
                 </button>
@@ -63,7 +63,7 @@ function Navbar() {
             <button
               data-collapse-toggle="navbar-dropdown"
               type="button"
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-dropdown"
               aria-expanded="false"
             >
@@ -83,11 +83,11 @@ function Navbar() {
             </button>
             {/* END Mobile Responsive Main Menu Button */}
 
-            <div
+            {/* <div
               className="hidden w-full md:block md:w-auto"
               id="navbar-dropdown"
-            >
-              <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-amber-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-amber-600 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            > */}
+              <ul className="custom-navbar flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-amber-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-amber-600 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 {/* home button */}
                 <li>
                   <Link
@@ -141,7 +141,7 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            {/* </div> */}
             {showNav()}
           </div>
         </nav>
