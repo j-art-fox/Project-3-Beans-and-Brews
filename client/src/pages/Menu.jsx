@@ -53,14 +53,14 @@ const products = [
   {
     name: 'Café Latte',
     description: `It's a classic for good reason: espresso, steamed milk, and topped with the perfect dollop of froth. It's perfect for those new to espresso drinks--and perfect for seasoned folks who love a traditional go-to.`,
-    image: 'toilet-paper.jpg',
+    image: 'https://www.beansandbrews.com/wp-content/uploads/2011/10/cafe-latte.jpg',
     price: 4.99,
     quantity: 20
   },
   {
     name: 'Pumpkin Pie Fritalia™',
     description: `It's a classic for good reason: espresso, steamed milk, and topped with the perfect dollop of froth. It's perfect for those new to espresso drinks--and perfect for seasoned folks who love a traditional go-to.`,
-    image: 'toilet-paper.jpg',
+    image: 'https://www.beansandbrews.com/wp-content/uploads/2019/09/Pumpkin-PF.jpg',
     price: 7.99,
     quantity: 20
   }
@@ -94,12 +94,14 @@ const Menu = () => {
                 return (
                   <div className="xl:w-1/4 md:w-1/2 p-4" key={product.name}>
                     <div className="bg-gray-100 p-6 rounded-lg">
+                      <a href="#">
                       <img
                         alt={product.name}
-                        className="h-40 rounded mx-auto object-center mb-6 opacity-70 hover:opacity-100 hover:text-amber-500"
+                        className="h-40 rounded mx-auto object-center mb-6 opacity-100 hover:opacity-80 hover:text-amber-500"
                         src={product.image}
                       />
-                      <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-80 hover:opacity-100">
+                      </a>
+                      <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-100 hover:opacity-100">
                         <h2 className="tracking-widest text-lg title-font font-medium text-amber-700 mb-1">
                           {product.name}
                         </h2>
