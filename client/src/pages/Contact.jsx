@@ -5,17 +5,17 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gray-300">
           <img
             className="h-full w-full object-cover object-center"
-            src="https://images.pexels.com/photos/773959/pexels-photo-773959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/773959/pexels-photo-773959.jpeg"
             alt="blog"
           />
         </div>
         <div className="container px-5 py-24 mx-auto flex">
           <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
             <h2 className="text-gray-900 text-xl mb-1 font-medium title-font text-center">
-              Let us know how we're doing.
+              Contact Us
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600">
-              Use the form below to help us know how we can best help you.
+              Use the form below to let us know how we can best help you.
             </p>
             <div className="relative mb-4">
               <label htmlFor="name" className="leading-7 text-sm text-gray-600">
@@ -41,7 +41,7 @@ const Contact = () => {
                 <option>Jobs and Opportunities</option>
                 <option>Community and Volunteering</option>
                 <option>News and Media Queries</option>
-                <option>Issues and or Complaints</option>
+                <option>Issues and/or Complaints</option>
               </select>
             </div>
             <div className="relative mb-4">

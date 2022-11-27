@@ -27,8 +27,8 @@ const OurCoffee = () => {
               </a>
             </div>
           </div>
-          <div className="md:w-1/2 w-5/6">
-            <img className="object-contain object-center rounded-xl" alt="hero" src="https://images.pexels.com/photos/3932951/pexels-photo-3932951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+          <div className="md:w-1/3 w-5/6">
+            <img className="object-contain object-center rounded-xl" alt="hero" src="https://images.pexels.com/photos/3932951/pexels-photo-3932951.jpeg"/>
           </div>
         </div>
       </section>
