@@ -18,7 +18,7 @@ const Sidebar = () => {
     >
       <button
         // @click="sidenav = true"
-        className="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden"
+        className="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-slate-900 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden"
       >
         <svg
           className="w-5 h-5 fill-current"
@@ -41,10 +41,10 @@ const Sidebar = () => {
       >
         <div className="space-y-6 md:space-y-10 mt-10">
           <h1 className="font-bold text-4xl text-center md:hidden">
-            D<span className="text-teal-600">.</span>
+            Account<span className="text-teal-600"></span>
           </h1>
           <h1 className="hidden md:block font-bold text-sm md:text-xl text-center">
-            Account<span className="text-teal-600">.</span>
+            Account<span className="text-teal-600"></span>
           </h1>
           <div id="profile" className="flex text-center flex-col justify-center items-center space-y-3">
             <FaUser className="items-center"/>
@@ -52,8 +52,9 @@ const Sidebar = () => {
               return(
             <div>
               <h2
-                className="font-medium text-xs md:text-sm text-center text-teal-500"
-              > {person.userName}
+                className="font-medium text-xs md:text-sm text-center text-blue-900"
+              > {person.userName} 
+              {/* displaying pamela because of the users const in global variables */}
               </h2>
               <p className="text-xs text-gray-500 text-center">ANOTHER LINE OF INFORMATION</p>
             </div>
@@ -75,7 +76,7 @@ const Sidebar = () => {
           </div>
           <div id="menu" className="flex flex-col space-y-2">
             <Link to='/dashboard' 
-            className="flex flex-row text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+            className="flex flex-row text-sm font-medium text-gray-700 py-2 px-2 hover:bg-slate-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
               <svg
                 className="w-6 h-6 fill-current inline-block"
                 fill="currentColor"
@@ -89,7 +90,7 @@ const Sidebar = () => {
               <span className="">Dashboard</span>
             </Link>
             <Link to='/rewards'
-            className="flex flex-row text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+            className="flex flex-row text-sm font-medium text-gray-700 py-2 px-2 hover:bg-slate-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <FaPiggyBank className="mx-1 flex justify-center items-center"/>
                 <path
@@ -99,7 +100,7 @@ const Sidebar = () => {
               <span className="">Rewards</span>
             </Link>
             <Link to='/settings'
-              className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+              className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-slate-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <svg
                 className="w-6 h-6 fill-current inline-block"
