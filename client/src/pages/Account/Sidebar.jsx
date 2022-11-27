@@ -1,14 +1,23 @@
+import { QUERY_USER } from '../../utils/queries.js';
+import { useQuery } from '@apollo/client';
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import { FaPiggyBank } from 'react-icons/fa';
-const users = [{
-  userName: 'Pamela',
-  lastName: 'Washington',
-  email: 'pamela@testmail.com',
-  password: 'password12345'}];
+// import { useSelector, useDispatch } from 'react-redux';
 
-const Sidebar = () => {
+function Sidebar() {
+  // try {
+    const { data } = useQuery(QUERY_USER);
+  let user;
+  if (data) {
+    user = data.user;
+  }
+  console.log(user);
+  // } catch (error) {
+  //   console.log(error);
+  // }
+
   return (
     <>
     <div
@@ -48,18 +57,20 @@ const Sidebar = () => {
           </h1>
           <div id="profile" className="flex text-center flex-col justify-center items-center space-y-3">
             <FaUser className="items-center"/>
-              {users.map((person) => {
-              return(
+            {user ? (
+              
             <div>
               <h2
-                className="font-medium text-xs md:text-sm text-center text-blue-900"
-              > {person.userName} 
-              {/* displaying pamela because of the users const in global variables */}
+                className="uppercase font-medium text-xs md:text-sm text-center text-blue-900"
+              > 
+              {user.firstName} {user.lastName}
               </h2>
-              <p className="text-xs text-gray-500 text-center">ANOTHER LINE OF INFORMATION</p>
+              <p className="text-xs text-gray-500 text-center">
+              {user.email}
+              </p>
             </div>
-              )
-                })}
+            ) : null}
+              
           </div>
       
             <button
