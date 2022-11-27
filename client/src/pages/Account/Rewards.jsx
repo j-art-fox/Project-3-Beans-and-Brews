@@ -15,7 +15,7 @@ function Rewards() {
     <Sidebar/>
     <div className="flex-col justify-center mx-auto mt-24 w-2/5">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img className="lg:h-96 md:h-36 w-full object-cover object-center" src="https://images.pexels.com/photos/259165/pexels-photo-259165.jpeg" alt="blog"/>
+                <img className="lg:h-96 md:h-64 sm:h-64 xm: w-full object-cover object-center" src="https://images.pexels.com/photos/259165/pexels-photo-259165.jpeg" alt="blog"/>
                 <div className="p-6">
                   {user ? (
                   <>
