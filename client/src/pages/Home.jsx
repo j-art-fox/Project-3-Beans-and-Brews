@@ -1,9 +1,7 @@
 import React from 'react';
 
-
 const Home = () => {
   return (
-    
     <div className="container h-screen flex flex-col">
       {/* Hero */}
       <section className="custom-hero-image flex flex-col justify-start items-center text-center h-1/2 w-screen text-white font-bold bg-slate-300 p-5">
@@ -13,9 +11,9 @@ const Home = () => {
           for the holidays! Try one today! Order Now!
         </p>
       </section>
-        <section className="flex justify-center items-center h-1/2 w-screen">
-          <div className="h-auto w-full mx-auto py-10 sm:w-3/4 md:w-1/2 2xl:w-2/5 shadow-lg p-5 rounded-md">
-            <form id="login" className="flex flex-col justify-center">
+      <section className="flex justify-center items-center h-1/2 w-screen">
+        <div className="h-auto w-full mx-auto py-10 sm:w-3/4 md:w-1/2 2xl:w-2/5 shadow-lg p-5 rounded-md">
+          {/* <form id="login" className="flex flex-col justify-center">
               <h4 className="text-5xl mb-10 text-center">Sign in</h4>
               <input
                 type="email"
@@ -45,9 +43,24 @@ const Home = () => {
               </div>
 
               <div id="warning"></div>
-            </form>
-          </div>
-        </section>
+            </form> */}
+            <p>This is going to get re-worked</p>
+          <p>
+            Don't have an account{' '}
+            <a className="text-amber-600 font-bold" href="/signup">
+              Sign up
+            </a>
+          </p>
+          <h2>
+            <p>
+              Already have an account{' '}
+              <a className="text-amber-600 font-bold" href="/login">
+                Login
+              </a>
+            </p>
+          </h2>
+        </div>
+      </section>
     </div>
   );
 };
