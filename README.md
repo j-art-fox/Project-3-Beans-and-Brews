@@ -9,7 +9,9 @@ This application is a revisitation of the Beans and Brews Coffee House applicati
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Usage](#usage)
-  - [Screenshot](#screenshot)
+  - [Preview](#preview)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
   - [Technologies](#technologies)
   - [Credits](#credits)
   - [Link](#link)
@@ -20,15 +22,19 @@ This application is a revisitation of the Beans and Brews Coffee House applicati
 - Automated display settings that match a user's browser's settings. 
 
 ## Usage
-- Insert the Fantasy Player Id Number into the search box. (If you do not know the number, you can use the link provided to find the player's id number)
-- Relevant player stats will be displayed on the screen along with relevant news and injury information about that player.
-- Your searches will automatically be saved to your browser's local storage so you can easily compare player stats.
-- With your knowledge of player statistics, you're now ready to make important trades and win your fantasy league.
+- After creating an account, users can order drinks and merchandise online using this application.
+- Users can browse menu and merchandise and learn more about the company and how Beans and Brews offers a truly unique approach to coffee and roasting.
+- Users can manage their settings, points, rewards, and coupons easily on the account page.
 
-## Screenshot
-- ![desktop1](./client/src/images/dtpreview1.jpg)
-- ![desktop2](./client/src/images/dtpreview2.jpg)
-- ![mobilescreenshot](./client/src/images/mobilepreview.png)
+## Preview
+### Desktop
+  <img src="./client/src/images/dtpreview1.jpg" width="1000">
+  </br>
+  <img src="./client/src/images/dtpreview2.jpg" width="1000">
+  </br>
+
+### Mobile
+  <img src="./client/src/images/mobilepreview.png" width="200">
 
 ## Technologies
 - Front-End: JavaScript, HTML5, CSS, ReactJS, TailwindCSS, NodeJS, Redux 
