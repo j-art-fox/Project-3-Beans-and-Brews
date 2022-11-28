@@ -23,6 +23,30 @@ code {
   background-repeat: no-repeat;
 }
 
+.custom-home-card-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .5)), url('./images/coffee-home-1.jpeg');
+height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-home-card-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .5)), url('./images//coffee-home-2.jpeg');
+height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-home-card-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .5)), url('./images//coffee-home-3.jpeg');
+height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .custom-para {
   display: -webkit-box;
   -webkit-line-clamp: 3;
