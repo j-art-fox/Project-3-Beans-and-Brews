@@ -4,11 +4,15 @@
 This application is a revisitation of the Beans and Brews Coffee House application. Content on the official website distracts users with numerous obstacles creating friction when ordering. Our application eliminates superfluous content and enables users to have a more concise and smoother experience ordering online and interacting on the website.  
 
 ## Table of Contents
-- [Features](#features)
-- [Usage](#usage)
-- [Technologies](#technologies)
-- [Credits](#credits)
-- [Link](#link)
+- [Beans and Brews Coffee House: Revisited](#beans-and-brews-coffee-house-revisited)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Usage](#usage)
+  - [Screenshot](#screenshot)
+  - [Technologies](#technologies)
+  - [Credits](#credits)
+  - [Link](#link)
 
 ## Features
 - Infrastructure for ordering your favorite drinks online.
@@ -22,9 +26,9 @@ This application is a revisitation of the Beans and Brews Coffee House applicati
 - With your knowledge of player statistics, you're now ready to make important trades and win your fantasy league.
 
 ## Screenshot
-![desktop1]()
-![desktop2]()
-![mobilescreenshot]()
+- ![desktop1](./client/src/images/dtpreview1.jpg)
+- ![desktop2](./client/src/images/dtpreview2.jpg)
+- ![mobilescreenshot](./client/src/images/mobilepreview.png)
 
 ## Technologies
 - Front-End: JavaScript, HTML5, CSS, ReactJS, TailwindCSS, NodeJS, Redux 

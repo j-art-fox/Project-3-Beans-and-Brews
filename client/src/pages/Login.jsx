@@ -54,13 +54,13 @@ function Login(props) {
               placeholder="Password"
               onChange={handleChange}
             />
-            {/* {error ? (
-              <div>
+            {error ? (
+              <div className="text-center text-xl mb-2">
                 <p className="error-text">
-                  The provided credentials are incorrect
+                  The provided credentials are incorrect. Try again.
                 </p>
               </div>
-            ) : null} */}
+            ) : null}
             <div className="flex flex-col justify-center items-center ">
               <button
                 className="bg-amber-600 w-1/4 py-3 rounded-lg text-center text-white mb-4 hover:bg-gray-900 ease-in-out duration-200 transition-all"

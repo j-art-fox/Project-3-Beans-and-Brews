@@ -72,7 +72,7 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className="bg-amber-600 border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-dark-200">
+        <nav className="bg-amber-600 border-gray-200 px-2 sm:px-4 py-2.5 dark:drop-shadow-md dark:bg-dark-300">
           <div className="container flex flex-wrap items-center justify-between mx-auto">
             <Link to="/" className="flex items-center">
               <img
@@ -88,7 +88,7 @@ function Navbar() {
             <button
               data-collapse-toggle="navbar-dropdown"
               type="button"
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 ml-3 text-sm text-gray-100 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-dropdown"
               aria-expanded="false"
             >
@@ -112,7 +112,7 @@ function Navbar() {
               className="hidden w-full md:block md:w-auto"
               id="navbar-dropdown"
             > */}
-            <ul className="custom-navbar flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-amber-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-amber-600 dark:bg-dark-200 md:dark:bg-dark-200 dark:border-gray-700">
+            <ul className="custom-navbar flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-amber-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-amber-600 dark:bg-dark-300 md:dark:bg-dark-300 dark:border-gray-700">
               {/* home button */}
               <li>
                 <Link
