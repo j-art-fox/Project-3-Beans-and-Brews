@@ -8,9 +8,9 @@ const OurCoffee = () => {
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="max-h-96 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">How High-Altitude Roasting™ Works
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-white">How High-Altitude Roasting™ Works
             </h1>
-            <p className="mb-8 leading-relaxed">  As you can imagine, coffee roasting is a complex art. Back when we
+            <p className="mb-8 leading-relaxed dark:text-dark-500">  As you can imagine, coffee roasting is a complex art. Back when we
               started in the early nineties, our founders worked hard to master
               it, but they learned the way most coffee is roasted—at sea
               level—just doesn’t work here in Salt Lake. It took a while to
@@ -21,9 +21,9 @@ const OurCoffee = () => {
               for the least possible amount of time. In the higher, thinner air
               of our mountain valley, this is much easier. And we can achieve a
               smoother, more intense flavor than you could anywhere else.</p>
-            <div className="flex justify-center">
+            <div className="flex justify-center transition-all">
               <a href="https://www.youtube.com/watch?v=XltzFNeLkXQ&feature=youtu.be" target="_blank" media="screen">
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Learn More</button>
+              <button className="inline-flex text-white font-bold bg-amber-600 border-0 py-2 px-6 focus:outline-none hover:bg-amber-500 rounded text-lg ease-in-out duration-300">Learn More</button>
               </a>
             </div>
           </div>
@@ -37,10 +37,10 @@ const OurCoffee = () => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="text-center mb-20">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 dark:text-white">
               FBA: Our Special Coding System for Coffee Flavor Profiles
             </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s dark:text-dark-500">
               You already know—we’re nuts about beans. So we developed our own
               special system to measure the flavor, body, and acidity (FBA) of
               our brews. It helps us explain our different roasts to our guests,
@@ -60,12 +60,12 @@ const OurCoffee = () => {
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
                   Flavor
                 </h2>
-                <ul className="text-stone-900 text-lg pl-3 title-font font-bold mb-3 text-left">
+                <ul className="text-stone-900 text-lg pl-3 title-font font-bold mb-3 text-left dark:text-white">
                   <li>F1 Mellow</li>
                   <li>F2 Medium</li>
                   <li>F3 Intense</li>
                 </ul>
-                <p className="leading-relaxed text-base">
+                <p className="leading-relaxed text-base dark:text-dark-500">
                   Just as you’d think: “flavor” describes the taste and aroma of
                   the coffee. You might not even realize it consciously, but you
                   notice it immediately. Flavor is a matter of preference—maybe
@@ -82,12 +82,12 @@ const OurCoffee = () => {
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
                   Body
                 </h2>
-                <ul className="text-amber-900 text-lg pl-3 title-font font-bold mb-3 text-left">
+                <ul className="text-amber-900 text-lg pl-3 title-font font-bold mb-3 text-left dark:text-amber-600">
                   <li>B1 Light</li>
                   <li>B2 Medium</li>
                   <li>B3 Full</li>
                 </ul>
-                <p className="leading-relaxed text-base">
+                <p className="leading-relaxed text-base dark:text-dark-500">
                   Similarly to wine, coffee has a “mouth-feel” or body. A drink
                   with a full body will take over the palette and have a
                   lingering effect, while a light-bodied brew will feel clean
@@ -105,12 +105,12 @@ const OurCoffee = () => {
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
                   Acidity
                 </h2>
-                <ul className="text-blue-900 text-lg pl-3 title-font font-bold mb-3 text-left">
+                <ul className="text-blue-900 text-lg pl-3 title-font font-bold mb-3 text-left dark:text-blue-600">
                   <li>A1 Low</li>
                   <li>A2 Moderate</li>
                   <li>A3 High</li>
                 </ul>
-                <p className="leading-relaxed text-base">
+                <p className="leading-relaxed text-base dark:text-dark-500">
                   Acidity is the third thing you’ll notice when you taste your
                   coffee—it’s the tart, dry effect you feel on your tongue. A
                   coffee with high acidity has a little bite or snap at first,

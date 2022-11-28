@@ -16,7 +16,7 @@ const Home = () => {
       </section>
       <section className="flex flex-col justify-center items-center w-screen">
         <div className="my-10">
-          <h2 className="text-4xl font-bold border-4 border-black border-solid p-4 rounded-lg">
+          <h2 className="text-4xl font-bold border-4 border-black border-solid p-4 rounded-lg dark:border-white dark:text-white">
             Beans for All
           </h2>
         </div>

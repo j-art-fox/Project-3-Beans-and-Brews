@@ -1,22 +1,24 @@
 import { Link } from 'react-router-dom';
 import Auth from '../../../src/utils/auth';
 import logo from '../../images/Horz-Wht-1024x139.png';
-import { FaRegLightbulb } from 'react-icons/fa';
-import { FaLightbulb } from 'react-icons/fa';
-import React, { useState } from 'react';
+// import { FaRegLightbulb } from 'react-icons/fa';
+// import { FaLightbulb } from 'react-icons/fa';
+import React, { useEffect } from 'react';
 
 // if not logged in there is the signin button
 // if logged in there is the account button
 
 function Navbar() {
+  useEffect(() => {
+    document.body.classList.add('dark:bg-dark-100');
+  }, []);
   function ShowNav() {
+    // const [viewMode, setMode] = useState(false);
 
-    const [viewMode, setMode] = useState(false);
-
-    const handleChange = () => {
-      setMode(!viewMode);
-      localStorage.setItem('theme', viewMode)
-    }
+    // const handleChange = () => {
+    //   setMode(!viewMode);
+    //   localStorage.setItem('theme', viewMode)
+    // }
     if (Auth.loggedIn()) {
       return (
         <div className="custom-navbar flex flex-row">
@@ -24,44 +26,44 @@ function Navbar() {
             <div className="flex md:order-2">
               <button
                 type="button"
-                className=" text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-stone-600 dark:hover:bg-stone-700 dark:focus:ring-stone-800"
+                className=" text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-amber-600 dark:hover:bg-amber-500 dark:focus:ring-stone-800 ease-in-out duration-300"
                 onClick={() => Auth.logout()}
               >
                 Sign out
               </button>
             </div>
           </ul>
-          <div className="flex justify-center items-center">
+          {/* <div className="flex justify-center items-center">
             {viewMode ? (
               <FaRegLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             ) : (
               <FaLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             )}
-          </div>
+          </div> */}
         </div>
       );
     } else {
       return (
         <div className="custom-navbar flex flex-row">
           <ul className="flex-row">
-            <div className="flex md:order-2">
+            <div className="flex md:order-2 transition-all">
               <Link to="/login">
                 <button
                   type="button"
-                  className=" text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-stone-600 dark:hover:bg-stone-700 dark:focus:ring-stone-800"
+                  className=" text-white bg-stone-700 hover:bg-stone-800 focus:ring-4 focus:outline-none focus:ring-stone-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-amber-600 dark:hover:bg-amber-500 dark:focus:ring-stone-800 ease-in-out duration-300"
                 >
                   Sign in
                 </button>
               </Link>
             </div>
           </ul>
-          <div className="flex justify-center items-center">
+          {/* <div className="flex justify-center items-center">
             {viewMode ? (
               <FaRegLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             ) : (
               <FaLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             )}
-          </div>
+          </div> */}
         </div>
       );
     }
@@ -70,7 +72,7 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className="bg-amber-600 border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+        <nav className="bg-amber-600 border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-dark-200">
           <div className="container flex flex-wrap items-center justify-between mx-auto">
             <Link to="/" className="flex items-center">
               <img
@@ -110,7 +112,7 @@ function Navbar() {
               className="hidden w-full md:block md:w-auto"
               id="navbar-dropdown"
             > */}
-            <ul className="custom-navbar flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-amber-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-amber-600 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="custom-navbar flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-amber-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-amber-600 dark:bg-dark-200 md:dark:bg-dark-200 dark:border-gray-700">
               {/* home button */}
               <li>
                 <Link
