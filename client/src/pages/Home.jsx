@@ -1,13 +1,13 @@
 import React from 'react';
 import { FaChevronRight } from 'react-icons/fa';
-import Google from '../images/google-play-badge.png';
-import Apple from '../images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg';
+import Google from '../images/google-appstore.png';
+import Apple from '../images/apple-appstore.png';
 
 const Home = () => {
   return (
     <div className="container flex flex-col">
       {/* Hero */}
-      <section className="custom-hero-image flex flex-col justify-start items-center text-center h-[50vh] w-screen text-white font-bold bg-slate-300 p-5">
+      <section className="custom-hero-image flex flex-col justify-start items-center text-center h-[55vh] w-screen text-white font-bold bg-slate-300 p-5">
         <h1 className="text-5xl mt-20 [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)]">
           The Holiday Favorites are back!
         </h1>
@@ -18,63 +18,87 @@ const Home = () => {
       </section>
       <section className="flex flex-col justify-center items-center w-screen">
         <div className="my-10">
-          <h2 className="text-4xl font-bold">Bean Give you Choose</h2>
+          <h2 className="text-4xl font-bold">Beans for All</h2>
         </div>
-        <section className="box-border custom-home-card-image container mx-auto flex justify-center items-center my-10">
-          <div className="custom-home-card-1 h-80 p-6">
-            <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white">
-              <h3 className="text-3xl font-bold my-1">
-                What's your special drink?
-              </h3>
-              <p className="text-xl my-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                quam assumenda consequuntur, explicabo repellendus reprehenderit
-                sequi incidunt nulla cupiditate dicta.
-              </p>
-              <button className="bg-white w-1/2 p-3 text-black rounded-lg">
-                <a className="flex justify-center items-center" href="/menu ">
-                  Order Now
-                  <FaChevronRight className="ml-2" />
-                </a>
-              </button>
+        <div className='container mx-auto grid grid-cols-1 grid-rows-3'>
+          <section className="box-border container mx-auto flex justify-center items-center my-10">
+            <div className="custom-home-card-1 h-80 p-6">
+              <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white transition-all">
+                <h3 className="text-3xl font-bold my-1">
+                  What's your special drink?
+                </h3>
+                <p className="text-xl my-1 custom-para">
+                  Roasting worth boasting! Grab a fresh bag of Beans & Brews
+                  High Altitude Roasted™ coffee and enjoy the smoother, richer
+                  flavor that comes from roasting in Salt Lake’s mountain air.
+                </p>
+                <button className="bg-amber-600 hover:bg-gray-900 w-1/2 p-3 text-white rounded-lg ease-in-out duration-300">
+                  <a className="flex justify-center items-center" href="/menu ">
+                    Order Now
+                    <FaChevronRight className="ml-2" />
+                  </a>
+                </button>
+              </div>
             </div>
-          </div>
-        </section>
-        <section className="box-border custom-home-card-image container mx-auto flex justify-center items-center my-10">
-          <div className="custom-home-card-2 h-80 p-6">
-            <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white">
-              <h3 className="text-3xl font-bold my-1">Sweet, sweet rewards.</h3>
-              <p className="text-xl my-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                quam assumenda consequuntur, explicabo repellendus reprehenderit
-                sequi incidunt nulla cupiditate dicta.
-              </p>
-              <img src={Google} className="w-1/2 text-black"/>
-              <img src={Apple} className="w-1/2 text-black"/>
-
+          </section>
+          <section className="box-border container mx-auto flex justify-center items-center my-10">
+            <div className="custom-home-card-2 h-80 p-6 w-full">
+              <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white">
+                <h3 className="text-3xl font-bold my-1">
+                  Sweet, sweet rewards.
+                </h3>
+                <p className="text-xl my-1 custom-para">
+                  Join our House Rewards™ loyalty program—it’s on a simple app.
+                </p>
+                <div className="flex flex-col transition-all">
+                  <a
+                    className="flex flex-row items-center ease-in-out duration-300 hover:text-amber-600 font-bold"
+                    href="#"
+                  >
+                    Download on Google Play
+                    <FaChevronRight className="ml-2" />
+                  </a>
+                  <a
+                    className="flex flex-row items-center ease-in-out duration-300 hover:text-amber-600 font-bold"
+                    href="#"
+                  >
+                    Download on Apple Store
+                    <FaChevronRight className="ml-2" />
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
-        <section className="box-border custom-home-card-image container mx-auto flex justify-center items-center my-10">
-          <div className="custom-home-card-3 h-80 p-6">
-            <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white">
-              <h3 className="text-3xl font-bold my-1">
-                What's your special drink?
-              </h3>
-              <p className="text-xl my-1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                quam assumenda consequuntur, explicabo repellendus reprehenderit
-                sequi incidunt nulla cupiditate dicta.
-              </p>
-              <button className="bg-white w-1/2 p-3 text-black rounded-lg">
-                <a className="flex justify-center items-center" href="/menu ">
-                  Order Now
-                  <FaChevronRight className="ml-2" />
-                </a>
-              </button>
+          </section>
+          <section className="box-border container mx-auto flex justify-center items-center my-10">
+            <div className="custom-home-card-3 h-80 p-6">
+              <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white transition-all">
+                <h3 className="text-3xl font-bold my-1">
+                  Our Coffee.
+                </h3>
+                <p className="text-xl my-1 custom-para">
+                  There are two main species of coffee beans: Robusta and
+                  Arabica. Since Robusta beans are cheaper to grow, they’re
+                  often used for commercial and instant coffee. But Arabica is
+                  the good stuff: it only grows at very certain altitudes, and
+                  only in just the right conditions. But it’s worth the extra
+                  effort—these trees produce beans with an aromatic and rich
+                  flavor. That’s why most gourmet coffee, including our very own
+                  beans, comes from Arabica plants. We wouldn’t have it any
+                  other way.
+                </p>
+                <button className="bg-amber-600 hover:bg-gray-900 w-1/2 p-3 text-white rounded-lg ease-in-out duration-300">
+                  <a
+                    className="flex justify-center items-center"
+                    href="/ourcoffee "
+                  >
+                    Learn More
+                    <FaChevronRight className="ml-2" />
+                  </a>
+                </button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </section>
     </div>
   );
