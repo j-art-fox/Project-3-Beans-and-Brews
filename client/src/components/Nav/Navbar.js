@@ -20,7 +20,7 @@ function Navbar() {
     if (Auth.loggedIn()) {
       return (
         <div className="custom-navbar flex flex-row">
-          <ul className="flex-row order-2">
+          <ul className="flex-row">
             <div className="flex md:order-2">
               <button
                 type="button"
@@ -33,9 +33,9 @@ function Navbar() {
           </ul>
           <div className="flex justify-center items-center">
             {viewMode ? (
-              <FaRegLightbulb onClick={handleChange} className="mr-4 text-2xl text-white cursor-pointer" />
+              <FaRegLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             ) : (
-              <FaLightbulb onClick={handleChange} className="mr-4 text-2xl text-white cursor-pointer" />
+              <FaLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             )}
           </div>
         </div>
@@ -43,7 +43,7 @@ function Navbar() {
     } else {
       return (
         <div className="custom-navbar flex flex-row">
-          <ul className="flex-row order-2">
+          <ul className="flex-row">
             <div className="flex md:order-2">
               <Link to="/login">
                 <button
@@ -57,9 +57,9 @@ function Navbar() {
           </ul>
           <div className="flex justify-center items-center">
             {viewMode ? (
-              <FaRegLightbulb onClick={handleChange} className="mr-4 text-2xl text-white cursor-pointer" />
+              <FaRegLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             ) : (
-              <FaLightbulb onClick={handleChange} className="mr-4 text-2xl text-white cursor-pointer" />
+              <FaLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
             )}
           </div>
         </div>
