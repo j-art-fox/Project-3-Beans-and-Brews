@@ -5,24 +5,27 @@ const Home = () => {
   return (
     <div className="container flex flex-col">
       {/* Hero */}
+      
       <section className="custom-hero-image flex flex-col justify-start items-center text-center h-[55vh] w-screen text-white font-bold bg-slate-300 p-5">
         <h1 className="text-5xl mt-20 [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)]">
           The Holiday Favorites are back!
         </h1>
         <p className="text-xl w-3/4 [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)]">
           Peppermint Mocha, Eggnog Latte, and the Pumpkin Pie Fritalia® are here
-          for the holidays! Try one today! Order Now!
+          for the holidays! Try one today!
         </p>
       </section>
       <section className="flex flex-col justify-center items-center w-screen">
         <div className="my-10">
-          <h2 className="text-4xl font-bold border-4 border-black border-solid p-4 rounded-lg dark:border-white dark:text-white">
-            Beans for All
-          </h2>
+          <button className="text-4xl hover:scale-105 ease-in-out p-4 rounded-lg dark:text-white bg-amber-600 drop-shadow-lg hover:drop-shadow-xl text-white">
+          <a className="flex justify-center ease-in-out items-center" href="/menu">
+            Order Now <FaChevronRight className="ml-2" />
+          </a>
+          </button>
         </div>
         <div className="container mx-auto grid grid-cols-1 grid-rows-3">
           <section className="box-border container mx-auto flex justify-center items-center mb-10">
-            <div className="custom-home-card-1 h-80 p-6">
+            <div className="custom-home-card-1 h-80 p-6 rounded-xl">
               <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white transition-all">
                 <h3 className="text-3xl font-bold my-1">
                   What's your special drink?
@@ -34,7 +37,7 @@ const Home = () => {
                 </p>
                 <button className="bg-amber-600 hover:bg-gray-900 w-1/2 p-3 text-white rounded-lg ease-in-out duration-300">
                   <a className="flex justify-center items-center" href="/menu ">
-                    Order Now
+                    See Menu
                     <FaChevronRight className="ml-2" />
                   </a>
                 </button>
@@ -42,7 +45,7 @@ const Home = () => {
             </div>
           </section>
           <section className="box-border container mx-auto flex justify-center items-center my-10">
-            <div className="custom-home-card-2 h-80 p-6 w-full">
+            <div className="custom-home-card-2 h-80 p-6 rounded-xl w-full">
               <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white">
                 <h3 className="text-3xl font-bold my-1">
                   Sweet, sweet rewards.
@@ -74,7 +77,7 @@ const Home = () => {
             </div>
           </section>
           <section className="box-border container mx-auto flex justify-center items-center my-10">
-            <div className="custom-home-card-3 h-80 p-6">
+            <div className="custom-home-card-3 rounded-xl h-80 p-6">
               <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white transition-all">
                 <h3 className="text-3xl font-bold my-1">Our Coffee.</h3>
                 <p className="text-xl my-1 custom-para">

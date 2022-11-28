@@ -17,7 +17,8 @@ code {
 }
 
 .custom-hero-image {
-  background-image: url('./images/hero-image-2.jpeg');
+  
+  background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgba(0,0,0,0) 25%), url('./images/hero-image-2.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
