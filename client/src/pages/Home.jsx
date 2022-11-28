@@ -1,7 +1,5 @@
 import React from 'react';
 import { FaChevronRight } from 'react-icons/fa';
-import Google from '../images/google-appstore.png';
-import Apple from '../images/apple-appstore.png';
 
 const Home = () => {
   return (
@@ -18,10 +16,10 @@ const Home = () => {
       </section>
       <section className="flex flex-col justify-center items-center w-screen">
         <div className="my-10">
-          <h2 className="text-4xl font-bold">Beans for All</h2>
+          <h2 className="text-4xl font-bold border-4 border-black border-solid p-4 rounded-lg">Beans for All</h2>
         </div>
         <div className='container mx-auto grid grid-cols-1 grid-rows-3'>
-          <section className="box-border container mx-auto flex justify-center items-center my-10">
+          <section className="box-border container mx-auto flex justify-center items-center mb-10">
             <div className="custom-home-card-1 h-80 p-6">
               <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-4 text-white transition-all">
                 <h3 className="text-3xl font-bold my-1">
