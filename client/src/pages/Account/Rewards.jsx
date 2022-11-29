@@ -42,7 +42,7 @@ function Rewards() {
           {/* r e w a r d s bro */}
           <div className="flex items-center justify-around flex-wrap">
             <div className="border-2 border-dashed rounded-sm border-gray-500 mx-2">
-            <img src={CouponCode} alt="this is coupon" class="h-64 mx-auto" />
+            <img src={CouponCode} alt="this is coupon" className="h-64 mx-auto" />
             </div>
           </div>
         </div>
