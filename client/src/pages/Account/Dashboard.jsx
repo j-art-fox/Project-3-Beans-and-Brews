@@ -19,10 +19,10 @@ function Dashboard() {
                 <div className="p-6">
                   {user ? (
                   <>
-                  <h1 className="title-font text-lg font-medium text-gray-500">
+                  <h1 className="title-font text-lg font-medium dark:text-gray-300">
                     {user.firstName} {user.lastName}
                   </h1>
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3">
+                  <h2 className="tracking-widest text-xs title-font font-medium dark:text-gray-500 mb-3">
                     {user.email}
                   </h2>
                   </>

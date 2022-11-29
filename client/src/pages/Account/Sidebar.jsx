@@ -61,7 +61,7 @@ function Sidebar() {
                   >
                     {user.firstName} {user.lastName}
                   </h2>
-                  <p className="text-xs text-gray-500 text-center">
+                  <p className="text-xs text-gray-600 dark:text-gray-500 text-center">
                     {user.email}
                   </p>
                 </div>
@@ -83,7 +83,7 @@ function Sidebar() {
           </div>
           <div id="menu" className="flex flex-col space-y-2">
             <Link to='/dashboard'
-              className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-300 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+              className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-400 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
               <svg
                 className="w-6 h-6 fill-current inline-block"
                 fill="currentColor"
@@ -97,7 +97,7 @@ function Sidebar() {
               <span className="">Dashboard</span>
             </Link>
             <Link to='/rewards'
-              className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-300 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+              className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-400 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <FaPiggyBank className="mx-1 flex justify-center items-center" />
               <path
@@ -107,7 +107,7 @@ function Sidebar() {
               <span className="">Rewards</span>
             </Link>
             <Link to='/settings'
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+              className="text-sm font-medium text-gray-700 dark:text-gray-400 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <svg
                 className="w-6 h-6 fill-current inline-block"

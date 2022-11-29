@@ -24,10 +24,10 @@ function Rewards() {
           <div className="p-6">
             {user ? (
               <>
-                <h1 className="title-font text-lg font-medium text-gray-500">
+                <h1 className="title-font text-lg font-medium dark:text-gray-300">
                   {user.firstName} {user.lastName}
                 </h1>
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3">
+                <h2 className="tracking-widest text-xs title-font font-medium dark:text-gray-500 ">
                   {user.email}
                 </h2>
               </>
@@ -41,9 +41,6 @@ function Rewards() {
           </div>
           {/* r e w a r d s bro */}
           <div className="flex items-center justify-around flex-wrap">
-            <div className="border-2 border-dashed rounded-sm border-gray-500 mx-2">
-            <img src={CouponCode} alt="this is coupon" class="h-64 mx-auto" />
-            </div>
             <div className="border-2 border-dashed rounded-sm border-gray-500 mx-2">
             <img src={CouponCode} alt="this is coupon" class="h-64 mx-auto" />
             </div>
