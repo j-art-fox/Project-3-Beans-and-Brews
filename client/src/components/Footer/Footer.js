@@ -1,6 +1,26 @@
 import { Link } from 'react-router-dom';
+import Auth from '../../../src/utils/auth';
 
 const Footer = () => {
+
+  function ShowNav() {
+
+    if (Auth.loggedIn()) {
+      return (
+        <p className="mb-4">
+        <Link to="/dashboard" className="text-gray-600 dark:text-white">
+          Account
+        </Link>
+      </p>
+      );
+    } else {
+      return (
+       null
+      );
+    }
+  }
+
+
   return (
     <footer className="h-10 text-center lg:text-left bg-gray-100 text-gray-600">
       {/* footer header */}
@@ -108,11 +128,7 @@ const Footer = () => {
                 Home
               </Link>
             </p>
-            <p className="mb-4">
-              <Link to="/dashboard" className="text-gray-600 dark:text-white">
-                Account
-              </Link>
-            </p>
+            {ShowNav()}
             <p className="mb-4">
               <Link to="/menu" className="text-gray-600 dark:text-white">
                 Menu
