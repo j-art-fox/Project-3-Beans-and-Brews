@@ -50,12 +50,12 @@ function Menu() {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20">
           <div className="grid lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="sm:text-3xl text-2xl text-center font-medium title-font mb-2 text-gray-900">
+            <h1 className="sm:text-3xl text-2xl text-center font-medium title-font mb-2 text-gray-900 dark:text-white">
               We give a Bean.
             </h1>
             <div className="h-1 justify-self-center w-96 bg-amber-500 rounded"></div>
           </div>
-          <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
+          <p className="lg:w-1/2 w-full leading-relaxed text-gray-500 dark:text-dark-500">
             From the beginning, we’ve made it our top priority to use the finest
             ingredients out there. We lovingly roast every single bean, right at
             our headquarters in Salt Lake. Here, every recipe is tested, time

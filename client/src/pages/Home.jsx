@@ -17,7 +17,7 @@ const Home = () => {
       </section>
       <section className="flex flex-col justify-center items-center w-screen">
         <div className="my-10">
-          <button className="text-4xl hover:scale-105 ease-in-out p-4 rounded-lg dark:text-white bg-amber-600 drop-shadow-lg hover:drop-shadow-xl text-white">
+          <button className="text-4xl hover:scale-105 p-4 rounded-lg dark:text-white bg-amber-600 drop-shadow-lg hover:drop-shadow-xl text-white transition-all ease-in-out duration-300">
           <a className="flex justify-center ease-in-out items-center" href="/menu">
             Order Now <FaChevronRight className="ml-2" />
           </a>
@@ -35,7 +35,7 @@ const Home = () => {
                   High Altitude Roasted™ coffee and enjoy the smoother, richer
                   flavor that comes from roasting in Salt Lake’s mountain air.
                 </p>
-                <button className="bg-amber-600 hover:bg-gray-900 w-1/2 p-3 text-white rounded-lg ease-in-out duration-300">
+                <button className="bg-amber-600 hover:bg-amber-500 w-1/2 p-3 text-white rounded-lg ease-in-out duration-300">
                   <a className="flex justify-center items-center" href="/menu ">
                     See Menu
                     <FaChevronRight className="ml-2" />
@@ -91,7 +91,7 @@ const Home = () => {
                   beans, comes from Arabica plants. We wouldn’t have it any
                   other way.
                 </p>
-                <button className="bg-amber-600 hover:bg-gray-900 w-1/2 p-3 text-white rounded-lg ease-in-out duration-300">
+                <button className="bg-amber-600 hover:bg-amber-500 w-1/2 p-3 text-white rounded-lg ease-in-out duration-300">
                   <a
                     className="flex justify-center items-center"
                     href="/ourcoffee "

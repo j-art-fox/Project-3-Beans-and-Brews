@@ -57,7 +57,7 @@ const OurCoffee = () => {
                 <FaGrinTongue className="w-10 h-10" />
               </div>
               <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-3 dark:text-white">
                   Flavor
                 </h2>
                 <ul className="text-stone-900 text-lg pl-3 title-font font-bold mb-3 text-left dark:text-white">
@@ -79,7 +79,7 @@ const OurCoffee = () => {
                 <FaGlassMartini className="w-10 h-10" />
               </div>
               <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-3 dark:text-white">
                   Body
                 </h2>
                 <ul className="text-amber-900 text-lg pl-3 title-font font-bold mb-3 text-left dark:text-amber-600">
@@ -102,7 +102,7 @@ const OurCoffee = () => {
                 <FaGrinTongueWink className="w-10 h-10" />
               </div>
               <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-3 dark:text-white">
                   Acidity
                 </h2>
                 <ul className="text-blue-900 text-lg pl-3 title-font font-bold mb-3 text-left dark:text-blue-600">
