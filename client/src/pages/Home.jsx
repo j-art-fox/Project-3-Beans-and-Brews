@@ -18,7 +18,7 @@ const Home = () => {
       <section className="flex flex-col justify-center items-center w-screen">
         <div className="my-10">
           <button className="text-4xl hover:scale-105 p-4 rounded-lg dark:text-white bg-amber-600 drop-shadow-lg hover:drop-shadow-xl text-white transition-all ease-in-out duration-300">
-          <a className="flex justify-center ease-in-out items-center" href="/menu">
+          <a className="flex justify-center items-center" href="/menu">
             Order Now <FaChevronRight className="ml-2" />
           </a>
           </button>

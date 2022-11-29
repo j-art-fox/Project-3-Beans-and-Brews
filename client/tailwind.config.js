@@ -12,6 +12,9 @@ module.exports = {
       '2xl': '1536px'
     },
     extend: {
+      fontFamily:{
+        'marker':['Permanent Marker','cursive'],
+      },
       colors: {
         dark: {
           100: '#121212',

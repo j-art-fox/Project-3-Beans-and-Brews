@@ -14,7 +14,6 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-
 import Navbar from "./components/Nav/Navbar";
 import NoMatch from "./pages/NoMatch";
 import Footer from "./components/Footer/Footer";
@@ -28,6 +27,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Account/Dashboard";
 import Rewards from "./pages/Account/Rewards";
 import Settings from "./pages/Account/Settings";
+import Cart from "./components/Cart/Index";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -60,7 +60,8 @@ function App() {
         <div>
           <Provider store={store}>
         <Navbar  />
-          <Routes>
+        <Cart />
+        <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/order" element={<OrderOnline />} />
