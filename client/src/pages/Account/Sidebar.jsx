@@ -40,16 +40,16 @@ function Sidebar() {
         </button>
         <div
           id="sidebar"
-          className="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 hidden transition-transform duration-300 ease-in-out"
+          className="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 hidden transition-transform duration-300 ease-in-out dark:bg-dark-300 dark:text-white "
           x-show="sidenav"
         // @click.away="sidenav = false"
         >
           <div className="space-y-6 md:space-y-10 mt-10">
             <h1 className="font-bold text-4xl text-center md:hidden">
-              Account<span className="text-teal-600"></span>
+              Account<span></span>
             </h1>
             <h1 className="hidden md:block font-bold text-sm md:text-xl text-center">
-              Account<span className="text-teal-600"></span>
+              Account<span></span>
             </h1>
             <div id="profile" className="flex text-center flex-col justify-center items-center space-y-3">
               <FaUser className="items-center" />
@@ -57,7 +57,7 @@ function Sidebar() {
 
                 <div>
                   <h2
-                    className="uppercase font-medium text-xs md:text-sm text-center text-blue-900"
+                    className="uppercase font-medium text-xs md:text-sm text-center text-blue-900 dark:text-gray-300"
                   >
                     {user.firstName} {user.lastName}
                   </h2>
@@ -83,7 +83,7 @@ function Sidebar() {
           </div>
           <div id="menu" className="flex flex-col space-y-2">
             <Link to='/dashboard'
-              className="flex flex-row text-sm font-medium text-gray-700 py-2 px-2 hover:bg-slate-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+              className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-300 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
               <svg
                 className="w-6 h-6 fill-current inline-block"
                 fill="currentColor"
@@ -97,7 +97,7 @@ function Sidebar() {
               <span className="">Dashboard</span>
             </Link>
             <Link to='/rewards'
-              className="flex flex-row text-sm font-medium text-gray-700 py-2 px-2 hover:bg-slate-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+              className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-300 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <FaPiggyBank className="mx-1 flex justify-center items-center" />
               <path
@@ -107,7 +107,7 @@ function Sidebar() {
               <span className="">Rewards</span>
             </Link>
             <Link to='/settings'
-              className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-slate-900 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
             >
               <svg
                 className="w-6 h-6 fill-current inline-block"
