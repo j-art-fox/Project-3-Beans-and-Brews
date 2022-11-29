@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import Auth from '../../../src/utils/auth';
 import logo from '../../images/Horz-Wht-1024x139.png';
-// import { FaRegLightbulb } from 'react-icons/fa';
-// import { FaLightbulb } from 'react-icons/fa';
 import React, { useEffect } from 'react';
 
 // if not logged in there is the signin button
@@ -13,12 +11,7 @@ function Navbar() {
     document.body.classList.add('dark:bg-dark-100');
   }, []);
   function ShowNav() {
-    // const [viewMode, setMode] = useState(false);
 
-    // const handleChange = () => {
-    //   setMode(!viewMode);
-    //   localStorage.setItem('theme', viewMode)
-    // }
     if (Auth.loggedIn()) {
       return (
         <div className="custom-navbar flex flex-row">
@@ -33,13 +26,6 @@ function Navbar() {
               </button>
             </div>
           </ul>
-          {/* <div className="flex justify-center items-center">
-            {viewMode ? (
-              <FaRegLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
-            ) : (
-              <FaLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
-            )}
-          </div> */}
         </div>
       );
     } else {
@@ -57,13 +43,6 @@ function Navbar() {
               </Link>
             </div>
           </ul>
-          {/* <div className="flex justify-center items-center">
-            {viewMode ? (
-              <FaRegLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
-            ) : (
-              <FaLightbulb onClick={handleChange} className="ml-4 text-2xl text-white cursor-pointer" />
-            )}
-          </div> */}
         </div>
       );
     }
@@ -108,10 +87,10 @@ function Navbar() {
             </button>
             {/* END Mobile Responsive Main Menu Button */}
 
-            {/* <div
-              className="hidden w-full md:block md:w-auto"
+            <div
+              className="hidden w-full lg:block md:w-auto"
               id="navbar-dropdown"
-            > */}
+            >
             <ul className="custom-navbar flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-amber-600 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-amber-600 dark:bg-dark-300 md:dark:bg-dark-300 dark:border-gray-700">
               {/* home button */}
               <li>
@@ -166,7 +145,7 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            {/* </div> */}
+            </div>
             {ShowNav()}
           </div>
         </nav>
