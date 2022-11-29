@@ -48,7 +48,7 @@ const handleChange = (event) => {
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-full ">
                 <div className="relative">
-                  <label htmlFor="firstName" className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="firstName" className="leading-7 text-sm text-gray-600 dark:text-white">
                     First Name
                   </label>
                   <input
@@ -62,7 +62,7 @@ const handleChange = (event) => {
               </div>
               <div className="p-2 w-full ">
                 <div className="relative">
-                  <label htmlFor="lastName" className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="lastName" className="leading-7 text-sm text-gray-600 dark:text-white">
                     Last Name
                   </label>
                   <input
@@ -76,7 +76,7 @@ const handleChange = (event) => {
               </div>
               <div className="p-2 w-full ">
                 <div className="relative">
-                  <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="email" className="leading-7 text-sm text-gray-600 dark:text-white">
                     Email
                   </label>
                   <input
@@ -90,7 +90,7 @@ const handleChange = (event) => {
               </div>
               <div className="p-2 w-full">
                 <div className="relative">
-                  <label htmlFor="password" className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="password" className="leading-7 text-sm text-gray-600 dark:text-white">
                     Password
                   </label>
                   <input
@@ -106,10 +106,16 @@ const handleChange = (event) => {
               <div className="p-2 w-full">
                 <button 
                   type="submit"
-                  className="flex mx-auto text-white bg-amber-500 border-0 py-2 px-8 focus:outline-none hover:bg-amber-600 rounded text-lg"
+                  className="flex mx-auto text-white bg-amber-600 transition-all ease-in-out duration-200 border-0 py-2 px-8 focus:outline-none hover:bg-amber-500 rounded text-lg"
                   >
-                  Submit
+                  Sign up
                 </button>
+                <p className='text-center mt-2 dark:text-dark-500'>
+                Already have an account?{' '}
+                <a className="text-amber-600 transition-all ease-in-out duration-200 hover:text-amber-500 font-bold" href="/login">
+                  Login
+                </a>
+              </p>
               </div>
             </div>
           </div>
