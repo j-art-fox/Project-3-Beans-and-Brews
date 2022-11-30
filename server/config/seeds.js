@@ -2,7 +2,7 @@ const db = require('./connection');
 const { User } = require('../models');
 const Category = require('../models/Category');
 const Product = require('../models/Product');
-
+// comment
 db.once('open', async () => {
 
   await Category.deleteMany();
