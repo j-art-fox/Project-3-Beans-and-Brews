@@ -37,11 +37,12 @@ function ProductItem(item) {
   return (
     <>
       <div className="bg-gray-100 p-6 rounded-lg dark:bg-dark-400">
-        <Link to={`/products/${_id}`}>
+        <Link to={`/menu`}>
           <img
             alt={name}
             src={`/images/${image}`}
             className=" border-4 border-gray-300 h-40 rounded mx-auto object-center mb-6 opacity-100 hover:opacity-80 hover:text-amber-500"
+            onClick={addToCart}
           />
         </Link>
         <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-100 hover:opacity-100 dark:bg-dark-300 dark:text-dark-500">

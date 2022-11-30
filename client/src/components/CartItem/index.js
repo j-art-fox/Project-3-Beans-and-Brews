@@ -36,10 +36,10 @@ const CartItem = ({ item }) => {
   }
 
   return (
-    <div className="flex-row">
+    <div className="flex-row flex item-center">
       <div>
         <img
-          className="w-full"
+          className="w-full  max-h-20 max-w-20"
           src={`/images/${item.image}`}
           alt="coffee"
         />

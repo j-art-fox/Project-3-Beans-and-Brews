@@ -28,6 +28,7 @@ import Dashboard from "./pages/Account/Dashboard";
 import Rewards from "./pages/Account/Rewards";
 import Settings from "./pages/Account/Settings";
 import Cart from "./components/Cart/Index";
+import Coupons from "./pages/Account/Coupons";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -69,6 +70,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/account" element={<Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/coupons" element={<Coupons />} />
             <Route path="/rewards" element={<Rewards />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/login" element={<Login />} />
