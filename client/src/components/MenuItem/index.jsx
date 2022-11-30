@@ -37,7 +37,7 @@ function ProductItem(item) {
   return (
     <>
       <div className="bg-gray-100 p-6 rounded-lg dark:bg-dark-400">
-        <Link to={`/products/${_id}`}>
+        <Link to={`/menu`}>
           <img
             alt={name}
             src={`/images/${image}`}
