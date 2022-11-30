@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../../utils/queries.js';
-import CouponCode from '../../images/qrcode.png';
+import QRCode from '../../images/qrcode.png';
 
 function Rewards() {
   const { data } = useQuery(QUERY_USER);
@@ -34,15 +34,14 @@ function Rewards() {
             ) : null}
           </div>
           <div className="w-full">
-            <p className="leading-relaxed mb-3 mt-2 font-semibold text-blue-900 p-6">
+            <p className="ml-6 leading-relaxed font-semibold text-blue-900">
               POINTS ACCRUED:
               <span> No points yet!</span>
             </p>
           </div>
-          {/* r e w a r d s bro */}
           <div className="flex items-center justify-around flex-wrap">
             <div className="border-2 border-dashed rounded-sm border-gray-500 mx-2">
-            <img src={CouponCode} alt="this is coupon" className="h-64 mx-auto" />
+            <img src={QRCode} alt="this is coupon" className="h-64 mx-auto" />
             </div>
           </div>
         </div>

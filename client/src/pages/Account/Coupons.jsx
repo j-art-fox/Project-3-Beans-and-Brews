@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../../utils/queries.js';
 
-function Dashboard() {
+function Coupons() {
   const { data } = useQuery(QUERY_USER);
   let user;
   if (data) {
@@ -15,7 +15,7 @@ function Dashboard() {
     <Sidebar/>
     <div className="flex-col justify-center mx-auto mt-24 w-2/5 shadow-xl">
               <div className="h-full border-opacity-60 rounded-lg overflow-hidden">
-                <img className="lg:h-96 md:h-64 sm:h-64 xm:h-14 w-full object-cover object-center" src="https://images.pexels.com/photos/2228889/pexels-photo-2228889.jpeg" alt="blog"/>
+                <img className="lg:h-96 md:h-64 sm:h-64 xm:h-14 w-full object-cover object-center" src="https://images.pexels.com/photos/1666067/pexels-photo-1666067.jpeg" alt="blog"/>
                 <div className="p-6">
                   {user ? (
                   <>
@@ -27,13 +27,11 @@ function Dashboard() {
                   </h2>
                   </>
                   ) : null}
-                  <div className="flex items-center flex-wrap ">
-                    <a className="text-blue-900 font-semibold inline-flex items-center md:mb-2 lg:mb-0 mt-3" href="#">Payment Method
-                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
+                  <div className="flex items-center flex-wrap">
+                    <a className="text-blue-900 font-semibold inline-flex items-center md:mb-2 lg:mb-0" href="#">Enter Coupon Code:
                     </a>
+                    <input className='appearance-none mx-6 block bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  placeholder='XXXX-XXXX-XXXX-XXXX'></input>
+                    <button className="appearance-none bg-amber-600 text-white px-3 py-2.5 shadow-sm rounded-md mr-3" type="submit">Enter</button>
                   </div>
                 </div>
               </div>
@@ -42,4 +40,4 @@ function Dashboard() {
   );
 };
 
-export default Dashboard
+export default Coupons

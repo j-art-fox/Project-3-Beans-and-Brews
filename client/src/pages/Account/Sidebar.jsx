@@ -4,6 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import { FaPiggyBank } from 'react-icons/fa';
+import { FaTicketAlt } from 'react-icons/fa';
 // import { useSelector, useDispatch } from 'react-redux';
 
 function Sidebar() {
@@ -95,6 +96,16 @@ function Sidebar() {
                 ></path>
               </svg>
               <span className="">Dashboard</span>
+            </Link>
+            <Link to='/coupons'
+              className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-400 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
+            >
+              <FaTicketAlt className="mx-1 mt-0.5 flex justify-center items-center" />
+              <path
+                d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"
+              ></path>
+
+              <span className="">Coupons</span>
             </Link>
             <Link to='/rewards'
               className="flex flex-row text-sm font-medium text-gray-700 dark:text-gray-400 py-2 px-2 hover:bg-slate-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
